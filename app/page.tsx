@@ -671,18 +671,7 @@ export default function Home() {
         </div>
       </footer>
 
-      {/* WhatsApp Floating Button */}
-      <div className="fixed bottom-6 right-6 z-50">
-        <Link
-          href="https://wa.me/528110759409"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex h-12 w-12 items-center justify-center rounded-full bg-green-500 text-white shadow-lg transition-transform hover:scale-110"
-        >
-          <WhatsApp className="h-6 w-6" />
-          <span className="sr-only">WhatsApp</span>
-        </Link>
-      </div>
+     
       {/* Al final del componente, antes del cierre de </div> principal, añadir: */}
       <WhatsappButton />
     </div>
