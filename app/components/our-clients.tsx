@@ -7,14 +7,14 @@ export function OurClients() {
   const { t } = useLanguage()
 
   const clients = [
-    { name: "Empresa 1", logo: "/placeholder.svg?height=80&width=150" },
-    { name: "Empresa 2", logo: "/placeholder.svg?height=80&width=150" },
-    { name: "Empresa 3", logo: "/placeholder.svg?height=80&width=150" },
-    { name: "Empresa 4", logo: "/placeholder.svg?height=80&width=150" },
-    { name: "Empresa 5", logo: "/placeholder.svg?height=80&width=150" },
-    { name: "Empresa 6", logo: "/placeholder.svg?height=80&width=150" },
-    { name: "Empresa 7", logo: "/placeholder.svg?height=80&width=150" },
-    { name: "Empresa 8", logo: "/placeholder.svg?height=80&width=150" },
+    { name: "Empresa 1", logo: "https://crepkozegpevqpyh.public.blob.vercel-storage.com/Audi.png" },
+    { name: "Empresa 2", logo: "https://crepkozegpevqpyh.public.blob.vercel-storage.com/Whirlpool_Corporation_Logo.png" },
+    { name: "Empresa 3", logo: "https://crepkozegpevqpyh.public.blob.vercel-storage.com/cemex-logo-.png" },
+    { name: "Empresa 4", logo: "https://crepkozegpevqpyh.public.blob.vercel-storage.com/Ternium_Logo.svg.png" },
+    { name: "Empresa 5", logo: "https://crepkozegpevqpyh.public.blob.vercel-storage.com/Herdez-logo_red-2.png" },
+    { name: "Empresa 6", logo: "https://crepkozegpevqpyh.public.blob.vercel-storage.com/American-Standard-Logo-2013n.png" },
+    { name: "Empresa 7", logo: "https://crepkozegpevqpyh.public.blob.vercel-storage.com/sales-del-valle.png" },
+    { name: "Empresa 8", logo: "https://crepkozegpevqpyh.public.blob.vercel-storage.com/envases_rgb600x400px.png" },
   ]
 
   return (

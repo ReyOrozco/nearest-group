@@ -18,31 +18,31 @@ export function SpecializedIndustries() {
     {
       nameKey: "textilTitle",
       descKey: "textilDesc",
-      icon: "/placeholder.svg?height=200&width=200",
+      icon: "https://crepkozegpevqpyh.public.blob.vercel-storage.com/Iconos/ropa.png",
       slug: "textil",
     },
     {
       nameKey: "saludTitle",
       descKey: "saludDesc",
-      icon: "/placeholder.svg?height=200&width=200",
+      icon: "https://crepkozegpevqpyh.public.blob.vercel-storage.com/Iconos/personal-medico.png",
       slug: "salud",
     },
     {
       nameKey: "alimentosTitle",
       descKey: "alimentosDesc",
-      icon: "/placeholder.svg?height=200&width=200",
+      icon: "https://crepkozegpevqpyh.public.blob.vercel-storage.com/Iconos/refresco.png",
       slug: "alimentos",
     },
     {
       nameKey: "automotrizTitle",
       descKey: "automotrizDesc",
-      icon: "/placeholder.svg?height=200&width=200",
+      icon: "https://crepkozegpevqpyh.public.blob.vercel-storage.com/Iconos/Automotriz.png",
       slug: "automotriz",
     },
     {
       nameKey: "electronicaTitle",
       descKey: "electronicaDesc",
-      icon: "/placeholder.svg?height=200&width=200",
+      icon: "https://crepkozegpevqpyh.public.blob.vercel-storage.com/Iconos/Electronica.png",
       slug: "electronica",
     },
   ]
