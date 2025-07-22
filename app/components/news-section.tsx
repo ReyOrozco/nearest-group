@@ -1,8 +1,7 @@
 "use client"
-import { ArrowRight } from "lucide-react"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { useLanguage } from "./language-toggle"
+import Image from "next/legacy/image"
 
 export interface NewsItem {
   id: string
@@ -22,7 +21,8 @@ export const newsItems: NewsItem[] = [
     description: "Nearest Group anuncia la apertura de nuevas rutas y servicios en países de Latinoamérica.",
     descriptionEn: "Nearest Group announces the opening of new routes and services in Latin American countries.",
     date: "2025-01-15",
-    image: "https://crepkozegpevqpyh.public.blob.vercel-storage.com/Noticias/Expansi%C3%B3n%20de%20servicios%20en%20Latinoam%C3%A9rica.png",
+    image:
+      "https://crepkozegpevqpyh.public.blob.vercel-storage.com/Noticias/Expansi%C3%B3n%20de%20servicios%20en%20Latinoam%C3%A9rica.png",
   },
   {
     id: "news-2",
@@ -71,7 +71,7 @@ export function NewsSection() {
         <div className="mx-auto grid max-w-5xl gap-6 py-12 md:grid-cols-2 lg:grid-cols-3">
           {newsItems.map((item) => (
             <Card key={item.id} className="overflow-hidden">
-              <img
+              <Image
                 alt={language === "es" ? item.title : item.titleEn}
                 className="aspect-video w-full object-cover"
                 height="200"
@@ -85,20 +85,8 @@ export function NewsSection() {
               <CardContent>
                 <p>{language === "es" ? item.description : item.descriptionEn}</p>
               </CardContent>
-              <CardFooter>
-                <Button variant="ghost" className="px-0">
-                  {t("Leer Mas")}
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </CardFooter>
             </Card>
           ))}
-        </div>
-        <div className="flex justify-center">
-          <Button variant="outline">
-            {t("ver Todas Noticias")}
-            <ArrowRight className="ml-2 h-4 w-4" />
-          </Button>
         </div>
       </div>
     </section>

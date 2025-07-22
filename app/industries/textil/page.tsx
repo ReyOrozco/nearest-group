@@ -48,7 +48,7 @@ export default function TextilIndustryPage() {
                     <ArrowLeft className="mr-1 h-4 w-4" />
                     {t("volverIndustrias")}
                   </Link>
-                  <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">{t("ropaTextil")}</h1>
+                  <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">{t("Ropa Textil")}</h1>
                   <p className="max-w-[600px] text-muted-foreground md:text-xl">
                     {language === "es"
                       ? "Ofrecemos soluciones logísticas integrales para la industria textil y de la moda, adaptadas a las exigencias de un sector dinámico donde la puntualidad y el cuidado del producto son fundamentales. Nuestros servicios especializados cubren desde el transporte internacional de materias primas hasta la distribución final al consumidor."
@@ -74,7 +74,7 @@ export default function TextilIndustryPage() {
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">{t("beneficiosIndustriaTextil")}</h2>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">{t("Beneficios Industria Textil")}</h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   {language === "es"
                     ? "Desarrollamos estrategias logísticas específicas para el sector textil, atendiendo a las particularidades de cada cliente y garantizando la eficiencia en toda la cadena de suministro."
@@ -98,7 +98,7 @@ export default function TextilIndustryPage() {
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">{t("necesitaSolucion")}</h2>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">{t("Necesita Solucion")}</h2>
                 <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   {language === "es"
                     ? "Contacte con nuestro equipo especializado para diseñar una solución logística a medida para su empresa textil o de moda."
@@ -107,7 +107,7 @@ export default function TextilIndustryPage() {
               </div>
               <div className="flex flex-col gap-2 min-[400px]:flex-row">
                 <Link href="/#contact">
-                  <Button className="bg-primary hover:bg-primary/90">{t("solicitarInformacion")}</Button>
+                  <Button className="bg-primary hover:bg-primary/90">{t("Solicita Informacion")}</Button>
                 </Link>
               </div>
             </div>

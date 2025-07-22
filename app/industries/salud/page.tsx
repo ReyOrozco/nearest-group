@@ -13,28 +13,28 @@ export default function HealthIndustryPage() {
   const benefits =
     language === "es"
       ? [
-          "Cadena de frío garantizada con monitoreo constante de temperatura",
-          "Sistemas de seguimiento en tiempo real para medicamentos y dispositivos médicos",
-          "Almacenamiento especializado con control de humedad y temperatura",
-          "Distribución urgente para medicamentos críticos y emergencias",
-          "Cumplimiento de normativas sanitarias internacionales (GMP, GDP)",
-          "Manejo seguro de productos farmacéuticos con trazabilidad completa",
-          "Transporte especializado para equipos médicos sensibles",
-          "Sistemas de serialización y control anti-falsificación",
-          "Logística inversa para productos sanitarios y gestión de residuos médicos",
-          "Soluciones de distribución a hospitales, farmacias y centros de salud",
+          "Cadena de frío garantizada con monitoreo constante de temperatura.",
+          "Sistemas de seguimiento en tiempo real para medicamentos y dispositivos médicos.",
+          "Almacenamiento especializado con control de humedad y temperatura.",
+          "Distribución urgente para medicamentos críticos y emergencias.",
+          "Cumplimiento de normativas sanitarias internacionales (GMP, GDP).",
+          "Manejo seguro de productos farmacéuticos con trazabilidad completa.",
+          "Transporte especializado para equipos médicos sensibles.",
+          "Sistemas de serialización y control anti-falsificación.",
+          "Logística inversa para productos sanitarios y gestión de residuos médicos.",
+          "Soluciones de distribución a hospitales, farmacias y centros de salud.",
         ]
       : [
-          "Guaranteed cold chain with constant temperature monitoring",
-          "Real-time tracking systems for medicines and medical devices",
-          "Specialized storage with humidity and temperature control",
-          "Urgent distribution for critical medications and emergencies",
-          "Compliance with international health regulations (GMP, GDP)",
-          "Safe handling of pharmaceutical products with complete traceability",
-          "Specialized transport for sensitive medical equipment",
-          "Serialization systems and anti-counterfeiting control",
-          "Reverse logistics for healthcare products and medical waste management",
-          "Distribution solutions to hospitals, pharmacies, and health centers",
+          "Guaranteed cold chain with constant temperature monitoring.",
+          "Real-time tracking systems for medicines and medical devices.",
+          "Specialized storage with humidity and temperature control.",
+          "Urgent distribution for critical medications and emergencies.",
+          "Compliance with international health regulations (GMP, GDP).",
+          "Safe handling of pharmaceutical products with complete traceability.",
+          "Specialized transport for sensitive medical equipment.",
+          "Serialization systems and anti-counterfeiting control.",
+          "Reverse logistics for healthcare products and medical waste management.",
+          "Distribution solutions to hospitals, pharmacies, and health centers.",
         ]
 
   return (
@@ -53,12 +53,12 @@ export default function HealthIndustryPage() {
                     {t("volverIndustrias")}
                   </Link>
                   <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                    {t("saludCuidadoPersonal")}
+                    {language === "es" ? "Salud y Cuidado Personal" : "Health and Personal Care"}
                   </h1>
                   <p className="max-w-[600px] text-muted-foreground md:text-xl">
                     {language === "es"
-                      ? "Proporcionamos servicios logísticos especializados para el sector de la salud y cuidado personal, con estricto cumplimiento normativo y máxima seguridad. Nuestras soluciones garantizan la integridad de productos farmacéuticos, dispositivos médicos y productos de cuidado personal en toda la cadena de distribución."
-                      : "We provide specialized logistics services for the health and personal care sector, with strict regulatory compliance and maximum security. Our solutions guarantee the integrity of pharmaceutical products, medical devices, and personal care products throughout the distribution chain."}
+                      ? "Proporcionamos servicios logísticos especializados para el sector salud y cuidado personal, con estricto cumplimiento normativo y máxima seguridad. Garantizamos la integridad de productos farmacéuticos, dispositivos médicos y productos de cuidado personal en toda la cadena de distribución."
+                      : "We provide specialized logistics services for the health and personal care sector, ensuring strict regulatory compliance and maximum security. Our solutions guarantee the integrity of pharmaceutical products, medical devices, and personal care products throughout the distribution chain."}
                   </p>
                 </div>
               </div>
@@ -71,7 +71,7 @@ export default function HealthIndustryPage() {
                   }
                   className="aspect-video overflow-hidden rounded-xl object-cover object-center"
                   height="310"
-                  src="/placeholder.svg?height=620&width=1100"
+                  src="/images/salud.jpg" // Asegúrate de poner esta imagen en /public/images
                   width="550"
                 />
               </div>
@@ -84,11 +84,15 @@ export default function HealthIndustryPage() {
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">{t("beneficiosIndustriaTextil")}</h2>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
+                  {language === "es"
+                    ? "Beneficios para el sector salud y cuidado personal"
+                    : "Benefits for the health and personal care sector"}
+                </h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   {language === "es"
                     ? "Entendemos los requisitos específicos del sector sanitario y farmacéutico, ofreciendo soluciones que aseguran la calidad e integridad de los productos desde el origen hasta el punto de entrega."
-                    : "We understand the specific requirements of the healthcare and pharmaceutical sector, offering solutions that ensure the quality and integrity of products from origin to delivery point."}
+                    : "We understand the specific requirements of the healthcare and pharmaceutical sector, offering solutions that ensure quality and integrity from origin to delivery."}
                 </p>
               </div>
             </div>
@@ -108,16 +112,20 @@ export default function HealthIndustryPage() {
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">{t("necesitaSolucion")}</h2>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
+                  {language === "es" ? "¿Necesitas una solución personalizada?" : "Need a custom solution?"}
+                </h2>
                 <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   {language === "es"
-                    ? "Póngase en contacto con nuestros especialistas en logística sanitaria para desarrollar estrategias que optimicen su cadena de suministro."
-                    : "Contact our healthcare logistics specialists to develop strategies that optimize your supply chain."}
+                    ? "Contacta a nuestros especialistas en logística sanitaria para diseñar estrategias que optimicen tu cadena de suministro."
+                    : "Contact our healthcare logistics specialists to design strategies that optimize your supply chain."}
                 </p>
               </div>
               <div className="flex flex-col gap-2 min-[400px]:flex-row">
                 <Link href="/#contact">
-                  <Button className="bg-primary hover:bg-primary/90">{t("solicitarInformacion")}</Button>
+                  <Button className="bg-primary hover:bg-primary/90">
+                    {language === "es" ? "Solicitar información" : "Request Information"}
+                  </Button>
                 </Link>
               </div>
             </div>

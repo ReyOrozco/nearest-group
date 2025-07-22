@@ -7,19 +7,32 @@ import { SiteHeader } from "@/app/components/site-header"
 import { useLanguage } from "@/app/components/language-toggle"
 
 export default function ElectronicsIndustryPage() {
-  const { t } = useLanguage()
+  const { language } = useLanguage()
 
-  const benefits = [
-    "Gestión de riesgos para carga de alto valor agregado",
-    "Visibilidad online en tiempo real",
-    "Conectividad con tecnologías de la información",
-    "Monitoreo y seguimiento interno y externo",
-    "Mayor flexibilidad y capacidad de respuesta",
-    "Pólizas de seguro robustas",
-    "Sistema de gestión de entrega vía web, móvil y EDI",
-    "Control de números de serie",
-    "Distribución con grandes redes mayoristas, centros comerciales y minoristas",
-  ]
+  const benefits =
+    language === "es"
+      ? [
+          "Gestión de riesgos para carga de alto valor agregado.",
+          "Visibilidad en línea en tiempo real.",
+          "Conectividad con tecnologías de la información.",
+          "Monitoreo y seguimiento interno y externo.",
+          "Mayor flexibilidad y capacidad de respuesta.",
+          "Pólizas de seguro robustas.",
+          "Sistema de gestión de entrega vía web, móvil y EDI.",
+          "Control de números de serie.",
+          "Distribución con grandes redes mayoristas, centros comerciales y minoristas.",
+        ]
+      : [
+          "Risk management for high-value cargo.",
+          "Real-time online visibility.",
+          "Connectivity with information technologies.",
+          "Internal and external monitoring and tracking.",
+          "Greater flexibility and responsiveness.",
+          "Comprehensive insurance coverage.",
+          "Delivery management system via web, mobile, and EDI.",
+          "Serial number control.",
+          "Distribution through large wholesale networks, malls, and retailers.",
+        ]
 
   return (
     <div className="flex min-h-screen flex-col">
@@ -34,18 +47,24 @@ export default function ElectronicsIndustryPage() {
                 <div className="space-y-2">
                   <Link href="/#industries" className="inline-flex items-center text-primary hover:underline mb-2">
                     <ArrowLeft className="mr-1 h-4 w-4" />
-                    {t("volverIndustrias")}
+                    {language === "es" ? "Volver a Industrias" : "Back to Industries"}
                   </Link>
-                  <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">{t("electronica")}</h1>
-                  <p className="max-w-[600px] text-muted-foreground md:text-xl">{t("descripcionElectronica")}</p>
+                  <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+                    {language === "es" ? "Industria Electrónica" : "Electronics Industry"}
+                  </h1>
+                  <p className="max-w-[600px] text-muted-foreground md:text-xl">
+                    {language === "es"
+                      ? "Ofrecemos soluciones logísticas para la industria electrónica, garantizando seguridad, trazabilidad y eficiencia en la gestión de productos de alto valor."
+                      : "We provide logistics solutions for the electronics industry, ensuring security, traceability, and efficiency in handling high-value products."}
+                  </p>
                 </div>
               </div>
               <div className="flex items-center justify-center">
                 <img
-                  alt="Logística para Industria Electrónica"
+                  alt={language === "es" ? "Logística para la industria electrónica" : "Logistics for electronics industry"}
                   className="aspect-video overflow-hidden rounded-xl object-cover object-center"
                   height="310"
-                  src="/placeholder.svg?height=620&width=1100"
+                  src="/images/electronica.jpg" // Asegúrate de agregar esta imagen en /public/images
                   width="550"
                 />
               </div>
@@ -58,9 +77,15 @@ export default function ElectronicsIndustryPage() {
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">{t("beneficiosIndustriaTextil")}</h2>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
+                  {language === "es"
+                    ? "Beneficios para la industria electrónica"
+                    : "Benefits for the electronics industry"}
+                </h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  {t("beneficiosOfrecemos")}
+                  {language === "es"
+                    ? "Nuestras soluciones logísticas aseguran el transporte eficiente y seguro de productos electrónicos, adaptándonos a los más altos estándares del sector."
+                    : "Our logistics solutions ensure efficient and safe transportation of electronic products, meeting the highest industry standards."}
                 </p>
               </div>
             </div>
@@ -80,14 +105,20 @@ export default function ElectronicsIndustryPage() {
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">{t("necesitaSolucion")}</h2>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
+                  {language === "es" ? "¿Necesitas una solución personalizada?" : "Need a custom solution?"}
+                </h2>
                 <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  {t("contactenosDiseno")}
+                  {language === "es"
+                    ? "Contacta a nuestro equipo para diseñar una solución logística adaptada a las necesidades específicas de tu negocio."
+                    : "Contact our team to design a logistics solution tailored to your business needs."}
                 </p>
               </div>
               <div className="flex flex-col gap-2 min-[400px]:flex-row">
                 <Link href="/#contact">
-                  <Button className="bg-primary hover:bg-primary/90">{t("solicitarInformacion")}</Button>
+                  <Button className="bg-primary hover:bg-primary/90">
+                    {language === "es" ? "Solicitar información" : "Request Information"}
+                  </Button>
                 </Link>
               </div>
             </div>

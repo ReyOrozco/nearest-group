@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/legacy/image"
 import { ArrowRight } from "lucide-react"
 import { useLanguage } from "./language-toggle"
 
@@ -67,10 +68,12 @@ export function SpecializedIndustries() {
               className="group relative overflow-hidden rounded-lg border bg-background p-6 text-left shadow-sm transition-all hover:shadow-md"
             >
               <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary mb-4">
-                <img
+                <Image
                   src={industry.icon || "/placeholder.svg"}
                   alt={t(industry.nameKey)}
-                  className="h-8 w-8 object-contain"
+                  width={32}
+                  height={32}
+                  className="object-contain"
                 />
               </div>
               <h3 className="text-xl font-bold group-hover:text-primary transition-colors">{t(industry.nameKey)}</h3>

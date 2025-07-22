@@ -1,17 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import {
-  ArrowRight,
-  CheckCircle,
-  Globe,
-  MapPin,
-  Package,
-  Plane,
-  Ship,
-  Truck,
-  PhoneIcon as WhatsApp,
-} from "lucide-react"
+import { CheckCircle, Globe, MapPin, Package, Plane, Ship, Truck } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { NewsSection } from "./components/news-section"
@@ -19,7 +9,6 @@ import { SiteHeader } from "./components/site-header"
 import { ClientReviews } from "./components/client-reviews"
 import { OurClients } from "./components/our-clients"
 import { SpecializedIndustries } from "./components/specialized-industries"
-import { OurCapacity } from "./components/our-capacity"
 import { useLanguage } from "./components/language-toggle"
 // Añadir el componente WhatsappButton al final del componente principal
 import { WhatsappButton } from "./components/whatsapp-button"
@@ -33,40 +22,51 @@ export default function Home() {
       <SiteHeader />
 
       {/* Hero Section */}
-      <section id="hero" className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-muted/50 to-muted">
-        <div className="container px-4 md:px-6">
-          <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 xl:grid-cols-2">
-            <div className="flex flex-col justify-center space-y-4">
-              <div className="space-y-2">
-                <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
-                  {t("heroTitle")}
-                </h1>
-                <p className="max-w-[600px] text-muted-foreground md:text-xl">{t("heroSubtitle")}</p>
-              </div>
-              <div className="flex flex-col gap-2 min-[400px]:flex-row">
-                <a href="#contact">
-                  <Button className="bg-success hover:bg-success/90">
-                    {t("solicitarCotizacion")}
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
-                </a>
-              </div>
-            </div>
-            <div className="flex items-center justify-center">
-              <img
-                alt="Logística Global"
-                className="aspect-video overflow-hidden rounded-xl object-cover object-center"
-                height="310"
-                src="https://crepkozegpevqpyh.public.blob.vercel-storage.com/Opcion01.jpg"
-                width="550"
-              />
-            </div>
+      <section id="hero" className="w-full bg-gradient-to-b from-muted/50 to-background py-16 md:py-24">
+        <div className="container grid max-w-6xl grid-cols-1 gap-12 md:grid-cols-2">
+          {/* Copy */}
+          <div>
+            <h1 className="mb-6 text-4xl font-extrabold leading-tight tracking-tight md:text-5xl">{t("heroTitle")}</h1>
+            <p className="mb-8 max-w-md text-muted-foreground">{t("heroSubtitle")}</p>
+            <Button asChild size="lg">
+              <Link href="/#contact">{t("solicitarCotizacion")} →</Link>
+            </Button>
+          </div>
+
+          {/* Illustration */}
+          <div className="flex items-center justify-center">
+            <img
+              src="https://crepkozegpevqpyh.public.blob.vercel-storage.com/Opcion01.webp"
+              alt="Logística Global"
+              className="h-auto w-full rounded-md object-cover shadow-lg"
+            />
           </div>
         </div>
       </section>
 
       {/* Nuestra Capacidad Section */}
-      <OurCapacity />
+      <section id="capacity" className="w-full bg-[rgb(22,164,255)] py-16 text-white">
+        <div className="container text-center">
+          <h2 className="text-3xl font-bold md:text-4xl">{t("nuestraCapacidad")}</h2>
+          <p className="mx-auto mt-4 max-w-2xl text-lg/relaxed">{t("descripcionCapacidad")}</p>
+
+          <div className="mt-12 grid grid-cols-2 gap-8 sm:grid-cols-3 lg:grid-cols-6">
+            {[
+              { value: "+23 600", label: t("m2 Almacen") },
+              { value: "+708", label: t("Colaboradores") },
+              { value: "+180", label: t("Clientes") },
+              { value: "+70", label: t("CrossDocks") },
+              { value: "1.2 M", label: t("Viajes Año") },
+              { value: "+17", label: t("paises") },
+            ].map((stat) => (
+              <div key={stat.label} className="space-y-2">
+                <p className="text-3xl font-extrabold tabular-nums">{stat.value}</p>
+                <p className="text-sm/relaxed">{stat.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Nuestros Servicios Section */}
       <section id="services" className="w-full py-12 md:py-24 lg:py-32 bg-muted/30">
@@ -407,7 +407,7 @@ export default function Home() {
                     {t("origen")}
                   </label>
                   <input
-                    className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                    className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                     id="origin"
                     placeholder="Ciudad, País"
                   />
@@ -420,7 +420,7 @@ export default function Home() {
                     {t("destino")}
                   </label>
                   <input
-                    className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                    className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                     id="destination"
                     placeholder="Ciudad, País"
                   />
@@ -507,7 +507,6 @@ export default function Home() {
                       className="h-5 w-5 text-primary"
                     >
                       <circle cx="12" cy="12" r="10"></circle>
-                      <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
                       <path d="M2 12h20"></path>
                     </svg>
                     <div>
@@ -671,7 +670,6 @@ export default function Home() {
         </div>
       </footer>
 
-     
       {/* Al final del componente, antes del cierre de </div> principal, añadir: */}
       <WhatsappButton />
     </div>

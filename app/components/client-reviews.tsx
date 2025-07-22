@@ -5,6 +5,7 @@ import { ChevronLeft, ChevronRight, Quote } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { useLanguage } from "./language-toggle"
+import Image from "next/legacy/image"
 
 export function ClientReviews() {
   const { t, language } = useLanguage()
@@ -17,7 +18,8 @@ export function ClientReviews() {
       text: "Nearest Group ha transformado nuestra cadena de suministro. Su atención al detalle y capacidad de respuesta son excepcionales.",
       textEn:
         "Nearest Group has transformed our supply chain. Their attention to detail and responsiveness are exceptional.",
-      image: "https://crepkozegpevqpyh.public.blob.vercel-storage.com/Iconos/lo%20que%20dicen%20nuestros%20clientes/Carlos%20Rodr%C3%ADguez.jpg",
+      image:
+        "https://crepkozegpevqpyh.public.blob.vercel-storage.com/Iconos/lo%20que%20dicen%20nuestros%20clientes/Carlos%20Rodr%C3%ADguez.jpg",
     },
     {
       name: "María González",
@@ -25,7 +27,8 @@ export function ClientReviews() {
       text: "Desde que trabajamos con Nearest Group, nuestros tiempos de entrega se han reducido en un 40%. Un socio logístico confiable.",
       textEn:
         "Since working with Nearest Group, our delivery times have been reduced by 40%. A reliable logistics partner.",
-      image: "https://crepkozegpevqpyh.public.blob.vercel-storage.com/Iconos/lo%20que%20dicen%20nuestros%20clientes/Mar%C3%ADa%20Gonz%C3%A1lez.jpg",
+      image:
+        "https://crepkozegpevqpyh.public.blob.vercel-storage.com/Iconos/lo%20que%20dicen%20nuestros%20clientes/Mar%C3%ADa%20Gonz%C3%A1lez.jpg",
     },
     {
       name: "Roberto Sánchez",
@@ -33,7 +36,8 @@ export function ClientReviews() {
       text: "La capacidad de Nearest Group para manejar envíos delicados de componentes electrónicos ha sido fundamental para nuestro crecimiento.",
       textEn:
         "Nearest Group's ability to handle delicate shipments of electronic components has been essential for our growth.",
-      image: "https://crepkozegpevqpyh.public.blob.vercel-storage.com/Iconos/lo%20que%20dicen%20nuestros%20clientes/Roberto.png",
+      image:
+        "https://crepkozegpevqpyh.public.blob.vercel-storage.com/Iconos/lo%20que%20dicen%20nuestros%20clientes/Roberto.png",
     },
   ]
 
@@ -65,7 +69,7 @@ export function ClientReviews() {
                   {language === "es" ? reviews[currentReview].text : reviews[currentReview].textEn}
                 </p>
                 <div className="flex items-center space-x-4">
-                  <img
+                  <Image
                     alt={reviews[currentReview].name}
                     className="h-12 w-12 rounded-full object-cover"
                     height="48"

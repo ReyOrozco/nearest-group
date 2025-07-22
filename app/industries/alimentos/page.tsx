@@ -8,29 +8,29 @@ import { useLanguage } from "@/app/components/language-toggle"
 import { WhatsappButton } from "@/app/components/whatsapp-button"
 
 export default function FoodIndustryPage() {
-  const { t, language } = useLanguage()
+  const { language } = useLanguage()
 
   const benefits =
     language === "es"
       ? [
-          "Gestión integral de la cadena de frío para productos perecederos",
-          "Trazabilidad completa con certificaciones de inocuidad alimentaria",
-          "Almacenamiento con control de temperatura multi-ambiente",
-          "Transporte especializado con equipos de refrigeración monitoreados",
-          "Distribución capilar a supermercados, hoteles y restaurantes",
-          "Gestión eficiente de fechas de caducidad y rotación de inventario",
-          "Cumplimiento de normativas HACCP, ISO 22000 y otras certificaciones alimentarias",
-          "Soluciones logísticas para productos frescos, congelados y secos",
+          "Gestión integral de la cadena de frío para productos perecederos.",
+          "Trazabilidad completa con certificaciones de inocuidad alimentaria.",
+          "Almacenamiento con control de temperatura en múltiples ambientes.",
+          "Transporte especializado con equipos de refrigeración monitoreados.",
+          "Distribución eficiente a supermercados, hoteles y restaurantes.",
+          "Gestión precisa de fechas de caducidad y rotación de inventario.",
+          "Cumplimiento de normativas HACCP, ISO 22000 y otras certificaciones.",
+          "Soluciones logísticas para productos frescos, congelados y secos.",
         ]
       : [
-          "Comprehensive cold chain management for perishable products",
-          "Complete traceability with food safety certifications",
-          "Storage with multi-environment temperature control",
-          "Specialized transport with monitored refrigeration equipment",
-          "Capillary distribution to supermarkets, hotels, and restaurants",
-          "Efficient management of expiration dates and inventory rotation",
-          "Compliance with HACCP, ISO 22000, and other food certifications",
-          "Logistics solutions for fresh, frozen, and dry products",
+          "Comprehensive cold chain management for perishable products.",
+          "Complete traceability with food safety certifications.",
+          "Storage with multi-environment temperature control.",
+          "Specialized transport with monitored refrigeration equipment.",
+          "Efficient distribution to supermarkets, hotels, and restaurants.",
+          "Accurate management of expiration dates and inventory rotation.",
+          "Compliance with HACCP, ISO 22000, and other certifications.",
+          "Logistics solutions for fresh, frozen, and dry products.",
         ]
 
   return (
@@ -46,15 +46,15 @@ export default function FoodIndustryPage() {
                 <div className="space-y-2">
                   <Link href="/#industries" className="inline-flex items-center text-primary hover:underline mb-2">
                     <ArrowLeft className="mr-1 h-4 w-4" />
-                    {t("volverIndustrias")}
+                    {language === "es" ? "Volver a Industrias" : "Back to Industries"}
                   </Link>
                   <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                    {t("alimentosBebidas")}
+                    {language === "es" ? "Industria de Alimentos y Bebidas" : "Food and Beverage Industry"}
                   </h1>
                   <p className="max-w-[600px] text-muted-foreground md:text-xl">
                     {language === "es"
-                      ? "Desarrollamos soluciones logísticas especializadas para la industria alimentaria, garantizando la seguridad alimentaria y preservando la calidad de los productos perecederos en toda la cadena de suministro. Nuestros sistemas aseguran la temperatura controlada y la trazabilidad total desde el origen hasta el consumidor final."
-                      : "We develop specialized logistics solutions for the food industry, guaranteeing food safety and preserving the quality of perishable products throughout the supply chain. Our systems ensure controlled temperature and total traceability from origin to end consumer."}
+                      ? "Desarrollamos soluciones logísticas especializadas para la industria alimentaria, garantizando la seguridad y calidad de los productos perecederos en toda la cadena de suministro. Nuestros sistemas aseguran temperatura controlada y trazabilidad total desde el origen hasta el consumidor final."
+                      : "We develop specialized logistics solutions for the food industry, guaranteeing the safety and quality of perishable products throughout the supply chain. Our systems ensure controlled temperature and total traceability from origin to the end consumer."}
                   </p>
                 </div>
               </div>
@@ -63,7 +63,7 @@ export default function FoodIndustryPage() {
                   alt={language === "es" ? "Logística para Alimentos y Bebidas" : "Logistics for Food and Beverages"}
                   className="aspect-video overflow-hidden rounded-xl object-cover object-center"
                   height="310"
-                  src="/placeholder.svg?height=620&width=1100"
+                  src="/placeholder.svg?height=620&width=1100" // Asegúrate de agregar esta imagen en /public/images
                   width="550"
                 />
               </div>
@@ -76,11 +76,15 @@ export default function FoodIndustryPage() {
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">{t("beneficiosIndustriaTextil")}</h2>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
+                  {language === "es"
+                    ? "Beneficios para la industria de alimentos"
+                    : "Benefits for the food industry"}
+                </h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   {language === "es"
-                    ? "Nuestros servicios logísticos especializados para alimentos y bebidas están diseñados para garantizar la frescura, calidad y seguridad de los productos durante todo el proceso de distribución."
-                    : "Our specialized logistics services for food and beverages are designed to guarantee the freshness, quality, and safety of products throughout the distribution process."}
+                    ? "Nuestros servicios logísticos especializados para alimentos y bebidas están diseñados para garantizar frescura, calidad y seguridad durante todo el proceso de distribución."
+                    : "Our specialized logistics services for food and beverages are designed to ensure freshness, quality, and safety throughout the distribution process."}
                 </p>
               </div>
             </div>
@@ -100,16 +104,20 @@ export default function FoodIndustryPage() {
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">{t("necesitaSolucion")}</h2>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
+                  {language === "es" ? "¿Necesitas una solución personalizada?" : "Need a custom solution?"}
+                </h2>
                 <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   {language === "es"
-                    ? "Contacte con nuestro equipo para diseñar una solución logística adaptada a las necesidades específicas de sus productos alimentarios."
-                    : "Contact our team to design a logistics solution adapted to the specific needs of your food products."}
+                    ? "Contacta a nuestro equipo para diseñar una solución logística adaptada a las necesidades específicas de tus productos alimentarios."
+                    : "Contact our team to design a logistics solution tailored to the specific needs of your food products."}
                 </p>
               </div>
               <div className="flex flex-col gap-2 min-[400px]:flex-row">
                 <Link href="/#contact">
-                  <Button className="bg-primary hover:bg-primary/90">{t("solicitarInformacion")}</Button>
+                  <Button className="bg-primary hover:bg-primary/90">
+                    {language === "es" ? "Solicitar información" : "Request Information"}
+                  </Button>
                 </Link>
               </div>
             </div>
