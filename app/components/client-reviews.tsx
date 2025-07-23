@@ -5,7 +5,6 @@ import { ChevronLeft, ChevronRight, Quote } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { useLanguage } from "./language-toggle"
-import Image from "next/legacy/image"
 
 export function ClientReviews() {
   const { t, language } = useLanguage()
@@ -69,12 +68,10 @@ export function ClientReviews() {
                   {language === "es" ? reviews[currentReview].text : reviews[currentReview].textEn}
                 </p>
                 <div className="flex items-center space-x-4">
-                  <Image
+                  <img
                     alt={reviews[currentReview].name}
                     className="h-12 w-12 rounded-full object-cover"
-                    height="48"
-                    src={reviews[currentReview].image || "/placeholder.svg"}
-                    width="48"
+                    src={reviews[currentReview].image || "/placeholder.svg?height=48&width=48"}
                   />
                   <div className="text-left">
                     <p className="font-semibold">{reviews[currentReview].name}</p>

@@ -1,7 +1,6 @@
 "use client"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { useLanguage } from "./language-toggle"
-import Image from "next/legacy/image"
 
 export interface NewsItem {
   id: string
@@ -71,12 +70,10 @@ export function NewsSection() {
         <div className="mx-auto grid max-w-5xl gap-6 py-12 md:grid-cols-2 lg:grid-cols-3">
           {newsItems.map((item) => (
             <Card key={item.id} className="overflow-hidden">
-              <Image
+              <img
                 alt={language === "es" ? item.title : item.titleEn}
                 className="aspect-video w-full object-cover"
-                height="200"
-                src={item.image || "/placeholder.svg"}
-                width="400"
+                src={item.image || "/placeholder.svg?height=200&width=400"}
               />
               <CardHeader>
                 <CardTitle>{language === "es" ? item.title : item.titleEn}</CardTitle>

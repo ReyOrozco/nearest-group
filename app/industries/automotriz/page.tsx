@@ -48,7 +48,7 @@ export default function AutomotiveIndustryPage() {
                     <ArrowLeft className="mr-1 h-4 w-4" />
                     {t("volverIndustrias")}
                   </Link>
-                  <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">{t("automotriz")}</h1>
+                  <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">{t("Automotriz")}</h1>
                   <p className="max-w-[600px] text-muted-foreground md:text-xl">
                     {language === "es"
                       ? "Ofrecemos soluciones logísticas de alta precisión para la industria automotriz, donde la puntualidad y fiabilidad son críticas. Nuestra experiencia abarca desde la gestión de la cadena de suministro para fabricantes de automóviles hasta la distribución de componentes y repuestos, aplicando metodologías Just-in-Time y Just-in-Sequence."
@@ -74,7 +74,9 @@ export default function AutomotiveIndustryPage() {
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">{t("beneficiosIndustriaTextil")}</h2>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
+                  {language === "es" ? "Beneficios para la Industria Automotriz" : "Benefits for the Automotive Industry"}
+                </h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   {language === "es"
                     ? "Nuestro enfoque en la industria automotriz se centra en la precisión, eficiencia y confiabilidad, garantizando que cada componente llegue a su destino en el momento exacto y en perfectas condiciones."

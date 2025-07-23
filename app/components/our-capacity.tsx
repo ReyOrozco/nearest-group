@@ -89,7 +89,7 @@ export function OurCapacity() {
           <div className="space-y-2">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">{t("capacidadTitle")}</h2>
             <p className="max-w-[900px] text-white/90 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              {t("capacidadDesc")}
+              {t("descripcionCapacidad")}
             </p>
           </div>
         </div>
@@ -99,7 +99,7 @@ export function OurCapacity() {
               <Warehouse className="h-8 w-8 text-white" />
             </div>
             <p className="text-3xl font-bold">+{counts.almacenamiento.toLocaleString()}</p>
-            <h3 className="text-xl font-bold">{t("m2Almacen")}</h3>
+            <h3 className="text-xl font-bold">{t("almacenamientoTitle")}</h3>
           </div>
           <div className="flex flex-col items-center space-y-2 text-center">
             <div className="rounded-full bg-white/10 p-4">
@@ -113,7 +113,7 @@ export function OurCapacity() {
               <Truck className="h-8 w-8 text-white" />
             </div>
             <p className="text-3xl font-bold">+{counts.flota.toLocaleString()}</p>
-            <h3 className="text-xl font-bold">{t("camiones")}</h3>
+            <h3 className="text-xl font-bold">{t("flotaTitle")}</h3>
           </div>
           <div className="flex flex-col items-center space-y-2 text-center">
             <div className="rounded-full bg-white/10 p-4">

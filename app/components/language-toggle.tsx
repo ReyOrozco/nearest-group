@@ -281,6 +281,12 @@ const translations: Translations = {
     es: "Historias de éxito de empresas que confían en nuestras soluciones logísticas",
     en: "Success stories from companies that trust our logistics solutions",
   },
+  descripcionCapacidad: {
+    es: "Somos un gran equipo de trabajo constantemente entregado de sol a sol a llevar la excelencia logística.",
+    en: "We are a great team constantly dedicated from sunrise to sunset to deliver logistics excellence.",
+  },
+  anteriorResena: { es: "Reseña anterior", en: "Previous review" },
+  siguienteResena: { es: "Siguiente reseña", en: "Next review" },
 }
 
 // Crear el contexto para el idioma

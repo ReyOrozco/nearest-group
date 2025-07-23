@@ -2,18 +2,17 @@
 
 import { useLanguage } from "./language-toggle"
 import { Card, CardContent } from "@/components/ui/card"
-import Image from "next/legacy/image"
 
 export function OurClients() {
   const { t } = useLanguage()
 
   const clients = [
-    { name: "Empresa 1", logo: "https://crepkozegpevqpyh.public.blob.vercel-storage.com/Audi.png" },
+    { name: "Empresa 1", logo: "https://crepkozegpevqpyh.public.blob.vercel-storage.com/cemex-logo-.png" },
     {
       name: "Empresa 2",
       logo: "https://crepkozegpevqpyh.public.blob.vercel-storage.com/Whirlpool_Corporation_Logo.png",
     },
-    { name: "Empresa 3", logo: "https://crepkozegpevqpyh.public.blob.vercel-storage.com/cemex-logo-.png" },
+    { name: "Empresa 3", logo: "https://crepkozegpevqpyh.public.blob.vercel-storage.com/Audi.png" },
     { name: "Empresa 4", logo: "https://crepkozegpevqpyh.public.blob.vercel-storage.com/Ternium_Logo.svg.png" },
     { name: "Empresa 5", logo: "https://crepkozegpevqpyh.public.blob.vercel-storage.com/Herdez-logo_red-2.png" },
     {
@@ -39,12 +38,10 @@ export function OurClients() {
           {clients.map((client, index) => (
             <Card key={index} className="overflow-hidden border-0 bg-background shadow-none">
               <CardContent className="flex items-center justify-center p-6">
-                <Image
+                <img
                   alt={client.name}
-                  className="aspect-[2/1] object-contain"
-                  height="80"
-                  src={client.logo || "/placeholder.svg"}
-                  width="150"
+                  className="aspect-[2/1] object-contain h-20 w-auto max-w-[150px]"
+                  src={client.logo || "/placeholder.svg?height=80&width=150"}
                 />
               </CardContent>
             </Card>
