@@ -18,31 +18,31 @@ export function SpecializedIndustries() {
     {
       nameKey: "textilTitle",
       descKey: "textilDesc",
-      icon: "https://crepkozegpevqpyh.public.blob.vercel-storage.com/Iconos/ropa.png",
+      icon: "https://crepkozegpevqpyh.public.blob.vercel-storage.com/ropa.png",
       slug: "textil",
     },
     {
       nameKey: "saludTitle",
       descKey: "saludDesc",
-      icon: "https://crepkozegpevqpyh.public.blob.vercel-storage.com/Iconos/personal-medico.png",
+      icon: "https://crepkozegpevqpyh.public.blob.vercel-storage.com/personal-medico.png",
       slug: "salud",
     },
     {
       nameKey: "alimentosTitle",
       descKey: "alimentosDesc",
-      icon: "https://crepkozegpevqpyh.public.blob.vercel-storage.com/Iconos/refresco.png",
+      icon: "https://crepkozegpevqpyh.public.blob.vercel-storage.com/refresco.png",
       slug: "alimentos",
     },
     {
       nameKey: "automotrizTitle",
       descKey: "automotrizDesc",
-      icon: "https://crepkozegpevqpyh.public.blob.vercel-storage.com/Iconos/Automotriz.png",
+      icon: "https://crepkozegpevqpyh.public.blob.vercel-storage.com/Automotriz.png",
       slug: "automotriz",
     },
     {
       nameKey: "electronicaTitle",
       descKey: "electronicaDesc",
-      icon: "https://crepkozegpevqpyh.public.blob.vercel-storage.com/Iconos/Electronica.png",
+      icon: "https://crepkozegpevqpyh.public.blob.vercel-storage.com/Electronica.png",
       slug: "electronica",
     },
   ]

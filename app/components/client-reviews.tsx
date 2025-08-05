@@ -18,7 +18,7 @@ export function ClientReviews() {
       textEn:
         "Nearest Group has transformed our supply chain. Their attention to detail and responsiveness are exceptional.",
       image:
-        "https://crepkozegpevqpyh.public.blob.vercel-storage.com/Iconos/lo%20que%20dicen%20nuestros%20clientes/Carlos%20Rodr%C3%ADguez.jpg",
+        "https://crepkozegpevqpyh.public.blob.vercel-storage.com/Carlos%20Rodr%C3%ADguez.jpg",
     },
     {
       name: "María González",
@@ -27,7 +27,7 @@ export function ClientReviews() {
       textEn:
         "Since working with Nearest Group, our delivery times have been reduced by 40%. A reliable logistics partner.",
       image:
-        "https://crepkozegpevqpyh.public.blob.vercel-storage.com/Iconos/lo%20que%20dicen%20nuestros%20clientes/Mar%C3%ADa%20Gonz%C3%A1lez.jpg",
+        "https://crepkozegpevqpyh.public.blob.vercel-storage.com/Mar%C3%ADa%20Gonz%C3%A1lez.jpg",
     },
     {
       name: "Roberto Sánchez",
@@ -36,7 +36,7 @@ export function ClientReviews() {
       textEn:
         "Nearest Group's ability to handle delicate shipments of electronic components has been essential for our growth.",
       image:
-        "https://crepkozegpevqpyh.public.blob.vercel-storage.com/Iconos/lo%20que%20dicen%20nuestros%20clientes/Roberto.png",
+        "https://crepkozegpevqpyh.public.blob.vercel-storage.com/Roberto.png",
     },
   ]
 

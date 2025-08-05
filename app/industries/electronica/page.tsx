@@ -64,7 +64,7 @@ export default function ElectronicsIndustryPage() {
                   alt={language === "es" ? "Logística para la industria electrónica" : "Logistics for electronics industry"}
                   className="aspect-video overflow-hidden rounded-xl object-cover object-center"
                   height="310"
-                  src="/images/electronica.jpg" // Asegúrate de agregar esta imagen en /public/images
+                  src="https://crepkozegpevqpyh.public.blob.vercel-storage.com/01Tecnologia.png" // Asegúrate de agregar esta imagen en /public/images
                   width="550"
                 />
               </div>

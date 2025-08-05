@@ -71,7 +71,7 @@ export default function HealthIndustryPage() {
                   }
                   className="aspect-video overflow-hidden rounded-xl object-cover object-center"
                   height="310"
-                  src="/images/salud.jpg" // Asegúrate de poner esta imagen en /public/images
+                  src="https://crepkozegpevqpyh.public.blob.vercel-storage.com/01salud.jpeg" // Asegúrate de poner esta imagen en /public/images
                   width="550"
                 />
               </div>

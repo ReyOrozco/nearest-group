@@ -21,7 +21,7 @@ export const newsItems: NewsItem[] = [
     descriptionEn: "Nearest Group announces the opening of new routes and services in Latin American countries.",
     date: "2025-01-15",
     image:
-      "https://crepkozegpevqpyh.public.blob.vercel-storage.com/Noticias/Expansi%C3%B3n%20de%20servicios%20en%20Latinoam%C3%A9rica.png",
+      "https://crepkozegpevqpyh.public.blob.vercel-storage.com/Expansi%C3%B3n%20de%20servicios%20en%20Latinoam%C3%A9rica.png",
   },
   {
     id: "news-2",
@@ -31,7 +31,7 @@ export const newsItems: NewsItem[] = [
       "Comprometidos con el medio ambiente, incorporamos vehículos eléctricos a nuestra flota de distribución urbana.",
     descriptionEn: "Committed to the environment, we incorporate electric vehicles into our urban distribution fleet.",
     date: "2025-05-20",
-    image: "https://crepkozegpevqpyh.public.blob.vercel-storage.com/Noticias/Unidad%20Electrica.jpeg",
+    image: "https://crepkozegpevqpyh.public.blob.vercel-storage.com/Unidad%20Electrica.jpeg",
   },
   {
     id: "news-3",
@@ -40,7 +40,7 @@ export const newsItems: NewsItem[] = [
     description: "Nearest Group obtiene la certificación ISO 9001:2015 por su sistema de gestión de calidad.",
     descriptionEn: "Nearest Group obtains ISO 9001:2015 certification for its quality management system.",
     date: "2025-03-10",
-    image: "https://crepkozegpevqpyh.public.blob.vercel-storage.com/Noticias/ISO.png",
+    image: "https://crepkozegpevqpyh.public.blob.vercel-storage.com/ISO.png",
   },
 ]
 

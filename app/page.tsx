@@ -22,24 +22,31 @@ export default function Home() {
       <SiteHeader />
 
       {/* Hero Section */}
-      <section id="hero" className="w-full bg-gradient-to-b from-muted/50 to-background py-16 md:py-24">
-        <div className="container grid max-w-6xl grid-cols-1 gap-12 md:grid-cols-2">
+      <section
+        id="hero"
+        className="w-full py-16 md:py-24 bg-cover bg-center bg-no-repeat relative"
+        style={{
+          backgroundImage: "url(https://crepkozegpevqpyh.public.blob.vercel-storage.com/Parra-Portada.webp)",
+        }}
+      >
+        {/* Overlay for better text readability */}
+        <div className="absolute inset-0 bg-black/40"></div>
+
+        <div className="container grid max-w-6xl grid-cols-1 gap-12 md:grid-cols-2 relative z-10">
           {/* Copy */}
-          <div>
-            <h1 className="mb-6 text-4xl font-extrabold leading-tight tracking-tight md:text-5xl">{t("heroTitle")}</h1>
-            <p className="mb-8 max-w-md text-muted-foreground">{t("heroSubtitle")}</p>
-            <Button asChild size="lg">
+          <div className="mx-0">
+            <h1 className="mb-6 text-4xl font-extrabold leading-tight tracking-tight md:text-5xl text-white drop-shadow-lg">
+              {t("heroTitle")}
+            </h1>
+            <p className="mb-8 max-w-md text-white/90 drop-shadow-md">{t("heroSubtitle")}</p>
+            <Button asChild size="lg" className="bg-primary hover:bg-primary/90 shadow-lg">
               <Link href="/#contact">{t("solicitarCotizacion")} →</Link>
             </Button>
           </div>
 
-          {/* Illustration */}
+          {/* Optional: Keep some visual element or remove this div entirely */}
           <div className="flex items-center justify-center">
-            <img
-              src="https://crepkozegpevqpyh.public.blob.vercel-storage.com/Opcion01.webp"
-              alt="Logística Global"
-              className="h-auto w-full rounded-md object-cover shadow-lg"
-            />
+            {/* You can add additional content here or remove this div */}
           </div>
         </div>
       </section>

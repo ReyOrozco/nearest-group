@@ -1,44 +1,137 @@
+"use client"
+
 import Link from "next/link"
 import { ArrowLeft, CheckCircle, Package, Plane } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
+import { useState } from "react"
+import { Menu, X, ChevronDown } from "lucide-react"
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 
 export default function AirLogisticsPage() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+  const navLinks = [
+    { name: "Inicio", href: "/", hasSubmenu: false },
+    {
+      name: "Quiénes Somos",
+      hasSubmenu: true,
+      submenu: [
+        { name: "Quiénes Somos", href: "/#about" },
+        { name: "Nuestra Capacidad", href: "/#capacity" },
+        { name: "Servicios", href: "/#services" },
+        { name: "Valor Agregado", href: "/#value" },
+        { name: "Soluciones", href: "/#industries" },
+      ],
+    },
+    {
+      name: "Clientes",
+      hasSubmenu: true,
+      submenu: [
+        { name: "Nuestros Clientes", href: "/#clients" },
+        { name: "Historias de Éxito", href: "/#success" },
+      ],
+    },
+    { name: "Noticias", href: "/#news", hasSubmenu: false },
+    { name: "Contacto", href: "/#contact", hasSubmenu: false },
+  ]
+
   return (
     <div className="flex min-h-screen flex-col">
       {/* Header */}
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-16 items-center justify-between">
-          <div className="flex items-center gap-2 font-bold text-xl text-primary">
-            <Package className="h-6 w-6" />
-            <span>Nearest Group</span>
+          <div className="flex items-center">
+            <Link href="/" className="mr-6 flex items-center space-x-2">
+              <img
+                src="/logo-nearest.png"
+                alt="Nearest Group Logo"
+                className="h-12 w-auto"
+                onError={(e) => {
+                  e.currentTarget.style.display = "none"
+                  e.currentTarget.nextElementSibling.style.display = "flex"
+                }}
+              />
+              <div className="hidden items-center space-x-2">
+                <span className="text-[rgb(1,176,241)] font-bold text-2xl">Nearest</span>
+                <span className="text-[rgb(201,201,201)] font-bold text-2xl ml-1">Group</span>
+              </div>
+            </Link>
+
+            {/* Mobile menu button */}
+            <button
+              className="ml-2 block md:hidden"
+              onClick={() => setIsMenuOpen((prev) => !prev)}
+              aria-label="Toggle navigation"
+            >
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
           </div>
-          <nav className="hidden md:flex gap-6">
-            <Link href="/" className="text-sm font-medium hover:text-primary">
-              Inicio
-            </Link>
-            <Link href="/#about" className="text-sm font-medium hover:text-primary">
-              Quiénes Somos
-            </Link>
-            <Link href="/#services" className="text-sm font-medium hover:text-primary">
-              Servicios
-            </Link>
-            <Link href="/#value" className="text-sm font-medium hover:text-primary">
-              Valor Agregado
-            </Link>
-            <Link href="/#contact" className="text-sm font-medium hover:text-primary">
-              Contacto
-            </Link>
+
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
+            {navLinks.map((link) =>
+              !link.hasSubmenu ? (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  className="transition-colors text-foreground/60 hover:text-foreground/80"
+                >
+                  {link.name}
+                </Link>
+              ) : (
+                <DropdownMenu key={link.name}>
+                  <DropdownMenuTrigger asChild>
+                    <Button variant="link" size="sm" className="p-0 text-foreground/60 hover:text-foreground/80">
+                      {link.name} <ChevronDown className="ml-1 h-3 w-3" />
+                    </Button>
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent>
+                    {link.submenu?.map((sub) => (
+                      <DropdownMenuItem key={sub.name} asChild>
+                        <Link href={sub.href} className="w-full">
+                          {sub.name}
+                        </Link>
+                      </DropdownMenuItem>
+                    ))}
+                  </DropdownMenuContent>
+                </DropdownMenu>
+              ),
+            )}
           </nav>
-          <div className="flex items-center gap-4">
-            <Link href="/portal" className="hidden md:block">
-              <Button variant="outline">Portal de Clientes</Button>
-            </Link>
-            <Button className="md:hidden" size="icon" variant="outline">
-              <Package className="h-4 w-4" />
-              <span className="sr-only">Toggle menu</span>
-            </Button>
-          </div>
+
+          {/* Mobile Navigation */}
+          {isMenuOpen && (
+            <div className="absolute top-16 left-0 right-0 border-b bg-background md:hidden">
+              <nav className="flex flex-col p-4">
+                {navLinks.map((link) =>
+                  !link.hasSubmenu ? (
+                    <Link key={link.name} href={link.href} className="py-2" onClick={() => setIsMenuOpen(false)}>
+                      {link.name}
+                    </Link>
+                  ) : (
+                    <div key={link.name} className="py-2">
+                      <div className="font-medium">{link.name}</div>
+                      <div className="mt-1 space-y-1 pl-4">
+                        {link.submenu?.map((sub) => (
+                          <Link
+                            key={sub.name}
+                            href={sub.href}
+                            className="block py-1 text-sm"
+                            onClick={() => setIsMenuOpen(false)}
+                          >
+                            {sub.name}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  ),
+                )}
+              </nav>
+            </div>
+          )}
+
+          <div className="flex items-center space-x-4">{/* Empty div to maintain layout */}</div>
         </div>
       </header>
 

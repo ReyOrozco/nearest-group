@@ -42,8 +42,19 @@ export function SiteHeader() {
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center">
           <Link href="/" className="mr-6 flex items-center space-x-2">
-            <span className="text-[rgb(1,176,241)] font-bold text-2xl">Nearest</span>
-            <span className="text-[rgb(201,201,201)] font-bold text-2xl ml-1">Group</span>
+            <img
+              src="/logo-nearest.png"
+              alt="Nearest Group Logo"
+              className="h-12 w-auto"
+              onError={(e) => {
+                e.currentTarget.style.display = "none"
+                e.currentTarget.nextElementSibling.style.display = "flex"
+              }}
+            />
+            <div className="hidden items-center space-x-2">
+              <span className="text-[rgb(1,176,241)] font-bold text-2xl">Nearest</span>
+              <span className="text-[rgb(201,201,201)] font-bold text-2xl ml-1">Group</span>
+            </div>
           </Link>
 
           {/* Mobile menu button */}

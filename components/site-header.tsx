@@ -1,7 +1,6 @@
 "use client"
 
 import Link from "next/link"
-import { Package } from "lucide-react"
 import { LanguageToggle, useLanguage } from "./language-toggle"
 
 export function SiteHeader() {
@@ -11,8 +10,11 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-14 items-center justify-between">
         <Link href="/" className="flex items-center space-x-2">
-          <Package className="h-6 w-6" />
-          <span className="font-bold sm:inline-block">Nearest Group</span>
+          <img
+            src="https://crepkozegpevqpyh.public.blob.vercel-storage.com/Logo%20Nearest.png"
+            alt="Nearest Group Logo"
+            className="h-8 w-auto"
+          />
         </Link>
         <div className="flex items-center space-x-4">
           <LanguageToggle />
