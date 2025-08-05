@@ -1,7 +1,10 @@
 "use client"
 
+import type React from "react"
+
 import Link from "next/link"
 import { CheckCircle, Globe, MapPin, Package, Plane, Ship, Truck } from "lucide-react"
+import { useState } from "react"
 
 import { Button } from "@/components/ui/button"
 import { NewsSection } from "./components/news-section"
@@ -10,11 +13,50 @@ import { ClientReviews } from "./components/client-reviews"
 import { OurClients } from "./components/our-clients"
 import { SpecializedIndustries } from "./components/specialized-industries"
 import { useLanguage } from "./components/language-toggle"
-// Añadir el componente WhatsappButton al final del componente principal
 import { WhatsappButton } from "./components/whatsapp-button"
 
 export default function Home() {
   const { t } = useLanguage()
+  const [isSubmitting, setIsSubmitting] = useState(false)
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    setIsSubmitting(true)
+
+    const formData = new FormData(e.currentTarget)
+
+    const data = {
+      name: formData.get("name"),
+      company: formData.get("company"),
+      email: formData.get("email"),
+      phone: formData.get("phone"),
+      service: formData.get("service"),
+      origin: formData.get("origin"),
+      destination: formData.get("destination"),
+      message: formData.get("message"),
+    }
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      })
+
+      if (response.ok) {
+        alert("Mensaje enviado correctamente")
+        e.currentTarget.reset()
+      } else {
+        alert("Error al enviar el mensaje")
+      }
+    } catch (error) {
+      alert("Error al enviar el mensaje")
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
 
   return (
     <div className="flex min-h-screen flex-col">
@@ -30,7 +72,7 @@ export default function Home() {
         }}
       >
         {/* Overlay for better text readability */}
-        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="absolute inset-0 bg-transparent"></div>
 
         <div className="container grid max-w-6xl grid-cols-1 gap-12 md:grid-cols-2 relative z-10">
           {/* Copy */}
@@ -328,43 +370,7 @@ export default function Home() {
             </div>
           </div>
           <div className="mx-auto grid max-w-5xl gap-6 py-12 lg:grid-cols-2">
-            <form
-              onSubmit={async (e) => {
-                e.preventDefault()
-                const formData = new FormData(e.currentTarget)
-
-                const data = {
-                  name: formData.get("name"),
-                  company: formData.get("company"),
-                  email: formData.get("email"),
-                  phone: formData.get("phone"),
-                  service: formData.get("service"),
-                  origin: formData.get("origin"),
-                  destination: formData.get("destination"),
-                  message: formData.get("message"),
-                }
-
-                try {
-                  const response = await fetch("/api/contact", {
-                    method: "POST",
-                    headers: {
-                      "Content-Type": "application/json",
-                    },
-                    body: JSON.stringify(data),
-                  })
-
-                  if (response.ok) {
-                    alert("Mensaje enviado correctamente")
-                    e.currentTarget.reset()
-                  } else {
-                    alert("Error al enviar el mensaje")
-                  }
-                } catch (error) {
-                  alert("Error al enviar el mensaje")
-                }
-              }}
-              className="space-y-4"
-            >
+            <form onSubmit={handleSubmit} className="space-y-4">
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <label
@@ -490,10 +496,11 @@ export default function Home() {
                   className="flex min-h-[120px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                   id="message"
                   placeholder={t("detallesAdicionales")}
+                  required
                 ></textarea>
               </div>
-              <Button type="submit" className="w-full bg-success hover:bg-success/90">
-                {t("enviarSolicitud")}
+              <Button type="submit" className="w-full bg-success hover:bg-success/90" disabled={isSubmitting}>
+                {isSubmitting ? "Enviando..." : t("enviarSolicitud")}
               </Button>
             </form>
             <div className="flex flex-col justify-center space-y-4">
@@ -725,7 +732,6 @@ export default function Home() {
         </div>
       </footer>
 
-      {/* Al final del componente, antes del cierre de </div> principal, añadir: */}
       <WhatsappButton />
     </div>
   )
