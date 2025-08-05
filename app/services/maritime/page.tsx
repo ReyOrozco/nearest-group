@@ -163,7 +163,7 @@ export default function MaritimeLogisticsPage() {
                 alt="Logística Marítima"
                 className="aspect-video overflow-hidden rounded-xl object-cover object-center"
                 height="310"
-                src="/placeholder.svg?height=620&width=1100"
+                src="https://crepkozegpevqpyh.public.blob.vercel-storage.com/20.jpg"
                 width="550"
               />
             </div>
@@ -207,7 +207,7 @@ export default function MaritimeLogisticsPage() {
                 alt="FCL Service"
                 className="aspect-video overflow-hidden rounded-xl object-cover object-center"
                 height="310"
-                src="/placeholder.svg?height=620&width=1100"
+                src="https://crepkozegpevqpyh.public.blob.vercel-storage.com/27.jpg"
                 width="550"
               />
             </div>
@@ -224,7 +224,7 @@ export default function MaritimeLogisticsPage() {
                 alt="LCL Service"
                 className="aspect-video overflow-hidden rounded-xl object-cover object-center"
                 height="310"
-                src="/placeholder.svg?height=620&width=1100"
+                src="https://crepkozegpevqpyh.public.blob.vercel-storage.com/29.jpg"
                 width="550"
               />
             </div>
@@ -302,7 +302,7 @@ export default function MaritimeLogisticsPage() {
                 alt="Multimodal Service"
                 className="aspect-video overflow-hidden rounded-xl object-cover object-center"
                 height="310"
-                src="/placeholder.svg?height=620&width=1100"
+                src="https://crepkozegpevqpyh.public.blob.vercel-storage.com/29.jpg"
                 width="550"
               />
             </div>

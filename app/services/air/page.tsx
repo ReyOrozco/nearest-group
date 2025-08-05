@@ -158,7 +158,7 @@ export default function AirLogisticsPage() {
                 alt="Logística Aérea"
                 className="aspect-video overflow-hidden rounded-xl object-cover object-center"
                 height="310"
-                src="/placeholder.svg?height=620&width=1100"
+                src="https://crepkozegpevqpyh.public.blob.vercel-storage.com/21.jpg"
                 width="550"
               />
             </div>
@@ -198,7 +198,7 @@ export default function AirLogisticsPage() {
                 alt="Priority Air Freight"
                 className="aspect-video overflow-hidden rounded-xl object-cover object-center"
                 height="310"
-                src="/placeholder.svg?height=620&width=1100"
+                src="https://crepkozegpevqpyh.public.blob.vercel-storage.com/22.jpg"
                 width="550"
               />
             </div>
@@ -215,7 +215,7 @@ export default function AirLogisticsPage() {
                 alt="Economy Air Freight"
                 className="aspect-video overflow-hidden rounded-xl object-cover object-center"
                 height="310"
-                src="/placeholder.svg?height=620&width=1100"
+                src="https://crepkozegpevqpyh.public.blob.vercel-storage.com/14.jpg"
                 width="550"
               />
             </div>
@@ -287,7 +287,7 @@ export default function AirLogisticsPage() {
                 alt="Charter Service"
                 className="aspect-video overflow-hidden rounded-xl object-cover object-center"
                 height="310"
-                src="/placeholder.svg?height=620&width=1100"
+                src="https://crepkozegpevqpyh.public.blob.vercel-storage.com/Portal%20de%20Gesti%C3%B3n%20Log%C3%ADstica.png"
                 width="550"
               />
             </div>

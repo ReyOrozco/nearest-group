@@ -163,7 +163,7 @@ export default function StorageLogisticsPage() {
                 alt="Almacenamiento"
                 className="aspect-video overflow-hidden rounded-xl object-cover object-center"
                 height="310"
-                src="/placeholder.svg?height=620&width=1100"
+                src="https://crepkozegpevqpyh.public.blob.vercel-storage.com/17.jpg"
                 width="550"
               />
             </div>
@@ -207,7 +207,7 @@ export default function StorageLogisticsPage() {
                 alt="Dedicated Storage"
                 className="aspect-video overflow-hidden rounded-xl object-cover object-center"
                 height="310"
-                src="/placeholder.svg?height=620&width=1100"
+                src="https://crepkozegpevqpyh.public.blob.vercel-storage.com/15.jpg"
                 width="550"
               />
             </div>
@@ -224,7 +224,7 @@ export default function StorageLogisticsPage() {
                 alt="Shared Storage"
                 className="aspect-video overflow-hidden rounded-xl object-cover object-center"
                 height="310"
-                src="/placeholder.svg?height=620&width=1100"
+                src="https://crepkozegpevqpyh.public.blob.vercel-storage.com/16.jpg"
                 width="550"
               />
             </div>

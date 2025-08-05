@@ -26,7 +26,7 @@ export default function Home() {
         id="hero"
         className="w-full py-16 md:py-24 bg-cover bg-center bg-no-repeat relative"
         style={{
-          backgroundImage: "url(https://crepkozegpevqpyh.public.blob.vercel-storage.com/Parra-Portada.webp)",
+          backgroundImage: "url(https://crepkozegpevqpyh.public.blob.vercel-storage.com/Sin-Logo-V2%20%281%29.webp)",
         }}
       >
         {/* Overlay for better text readability */}

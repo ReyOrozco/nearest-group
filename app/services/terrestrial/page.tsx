@@ -158,7 +158,7 @@ export default function TerrestrialLogisticsPage() {
                 alt="Logística Terrestre"
                 className="aspect-video overflow-hidden rounded-xl object-cover object-center"
                 height="310"
-                src="/placeholder.svg?height=620&width=1100"
+                src="https://crepkozegpevqpyh.public.blob.vercel-storage.com/6.png"
                 width="550"
               />
             </div>
@@ -206,7 +206,7 @@ export default function TerrestrialLogisticsPage() {
                 alt="FTL Service"
                 className="aspect-video overflow-hidden rounded-xl object-cover object-center"
                 height="310"
-                src="/placeholder.svg?height=620&width=1100"
+                src="https://crepkozegpevqpyh.public.blob.vercel-storage.com/DeWatermark.ai_1752852874694.jpeg"
                 width="550"
               />
             </div>
@@ -223,7 +223,7 @@ export default function TerrestrialLogisticsPage() {
                 alt="LTL Service"
                 className="aspect-video overflow-hidden rounded-xl object-cover object-center"
                 height="310"
-                src="/placeholder.svg?height=620&width=1100"
+                src="https://crepkozegpevqpyh.public.blob.vercel-storage.com/wmremove-transformed.jpeg"
                 width="550"
               />
             </div>
@@ -301,7 +301,7 @@ export default function TerrestrialLogisticsPage() {
                 alt="Transfer Service"
                 className="aspect-video overflow-hidden rounded-xl object-cover object-center"
                 height="310"
-                src="/placeholder.svg?height=620&width=1100"
+                src="https://crepkozegpevqpyh.public.blob.vercel-storage.com/Transfer.jpg"
                 width="550"
               />
             </div>
