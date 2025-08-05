@@ -163,7 +163,7 @@ export async function POST(request: Request) {
     // Enviar el correo usando Resend - Solo a la dirección verificada
     const { data, error } = await resend.emails.send({
       from: "Nearest Group <soporte@opsafy.com>",
-      to: ["luis.parra@nearestgroup.comm"], // Cambiar a la dirección verificada
+      to: ["luis.parra@nearestgroup.com"], // Cambiar a la dirección verificada
       replyTo: email,
       subject: `Nueva Solicitud de Cotización: ${serviceName} - ${name}`,
       html: htmlTemplate,
