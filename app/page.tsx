@@ -328,7 +328,43 @@ export default function Home() {
             </div>
           </div>
           <div className="mx-auto grid max-w-5xl gap-6 py-12 lg:grid-cols-2">
-            <div className="space-y-4">
+            <form
+              onSubmit={async (e) => {
+                e.preventDefault()
+                const formData = new FormData(e.currentTarget)
+
+                const data = {
+                  name: formData.get("name"),
+                  company: formData.get("company"),
+                  email: formData.get("email"),
+                  phone: formData.get("phone"),
+                  service: formData.get("service"),
+                  origin: formData.get("origin"),
+                  destination: formData.get("destination"),
+                  message: formData.get("message"),
+                }
+
+                try {
+                  const response = await fetch("/api/contact", {
+                    method: "POST",
+                    headers: {
+                      "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(data),
+                  })
+
+                  if (response.ok) {
+                    alert("Mensaje enviado correctamente")
+                    e.currentTarget.reset()
+                  } else {
+                    alert("Error al enviar el mensaje")
+                  }
+                } catch (error) {
+                  alert("Error al enviar el mensaje")
+                }
+              }}
+              className="space-y-4"
+            >
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <label
@@ -338,9 +374,11 @@ export default function Home() {
                     {t("nombre")}
                   </label>
                   <input
+                    name="name"
                     className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                     id="name"
                     placeholder={t("nombre")}
+                    required
                   />
                 </div>
                 <div className="space-y-2">
@@ -351,6 +389,7 @@ export default function Home() {
                     {t("empresa")}
                   </label>
                   <input
+                    name="company"
                     className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                     id="company"
                     placeholder={t("empresa")}
@@ -366,10 +405,12 @@ export default function Home() {
                     {t("email")}
                   </label>
                   <input
+                    name="email"
                     className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                     id="email"
                     placeholder="correo@empresa.com"
                     type="email"
+                    required
                   />
                 </div>
                 <div className="space-y-2">
@@ -380,6 +421,7 @@ export default function Home() {
                     {t("telefono")}
                   </label>
                   <input
+                    name="phone"
                     className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                     id="phone"
                     placeholder="+52 (123) 456-7890"
@@ -394,6 +436,7 @@ export default function Home() {
                   {t("tipoServicio")}
                 </label>
                 <select
+                  name="service"
                   className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                   id="service"
                 >
@@ -414,6 +457,7 @@ export default function Home() {
                     {t("origen")}
                   </label>
                   <input
+                    name="origin"
                     className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                     id="origin"
                     placeholder="Ciudad, País"
@@ -427,6 +471,7 @@ export default function Home() {
                     {t("destino")}
                   </label>
                   <input
+                    name="destination"
                     className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                     id="destination"
                     placeholder="Ciudad, País"
@@ -441,13 +486,16 @@ export default function Home() {
                   {t("mensaje")}
                 </label>
                 <textarea
+                  name="message"
                   className="flex min-h-[120px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                   id="message"
                   placeholder={t("detallesAdicionales")}
                 ></textarea>
               </div>
-              <Button className="w-full bg-success hover:bg-success/90">{t("enviarSolicitud")}</Button>
-            </div>
+              <Button type="submit" className="w-full bg-success hover:bg-success/90">
+                {t("enviarSolicitud")}
+              </Button>
+            </form>
             <div className="flex flex-col justify-center space-y-4">
               <div className="rounded-lg border bg-background p-6">
                 <h3 className="text-xl font-bold">{t("informacionContacto")}</h3>
