@@ -166,7 +166,7 @@ export async function POST(request: Request) {
 
     // Enviar el correo usando Resend
     const { data, error } = await resend.emails.send({
-      from: "Nearest Group <luis.parra@nearestgroup.com>",
+      from: "Nearest Group <onboarding@resend.dev>",
       to: ["contacto@nearestgroup.com"],
       replyTo: email,
       subject: `Nueva Solicitud de Cotización: ${serviceName} - ${name}`,
