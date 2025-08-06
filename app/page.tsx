@@ -6,12 +6,14 @@ import Link from "next/link"
 import { CheckCircle, Globe, MapPin, Package, Plane, Ship, Truck } from "lucide-react"
 import { useState } from "react"
 
+
 import { Button } from "@/components/ui/button"
 import { NewsSection } from "./components/news-section"
 import { SiteHeader } from "./components/site-header"
 import { ClientReviews } from "./components/client-reviews"
 import { OurClients } from "./components/our-clients"
 import { SpecializedIndustries } from "./components/specialized-industries"
+import { ValoresSection } from "./components/valores-section"
 import { useLanguage } from "./components/language-toggle"
 import { WhatsappButton } from "./components/whatsapp-button"
 
@@ -307,6 +309,7 @@ export default function Home() {
       <SpecializedIndustries />
 
       {/* Value Added Section */}
+    <ValoresSection />
       <section id="value" className="w-full py-12 md:py-24 lg:py-32">
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
