@@ -13,7 +13,7 @@ export function SiteHeader() {
           <img
             src="https://crepkozegpevqpyh.public.blob.vercel-storage.com/Logo%20Nearest.png"
             alt="Nearest Group Logo"
-            className="h-32 w-auto"
+            className="h-24 w-auto"
           />
         </Link>
         <div className="flex items-center space-x-4">

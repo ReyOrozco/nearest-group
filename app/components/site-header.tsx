@@ -45,7 +45,7 @@ export function SiteHeader() {
             <img
               src="/logo-nearest.png"
               alt="Nearest Group Logo"
-              className="h-32 w-auto"
+              className="h-24 w-auto"
               onError={(e) => {
                 e.currentTarget.style.display = "none"
                 e.currentTarget.nextElementSibling.style.display = "flex"
