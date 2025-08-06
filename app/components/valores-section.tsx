@@ -25,7 +25,8 @@ export function ValoresSection() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto mt-10">
+        {/* Dos columnas responsivas */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto mt-10">
           {valores.map((valor, index) => (
             <div key={index} className="flex items-center space-x-3">
               <CheckCircle className="text-primary w-5 h-5 flex-shrink-0" />

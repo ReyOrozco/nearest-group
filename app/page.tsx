@@ -286,17 +286,15 @@ export default function Home() {
                 <CheckCircle className="h-6 w-6" />
                 <h3 className="text-xl font-bold">{t("valores")}</h3>
               </div>
-                  <ValoresSection />
-              <ul className="space-y-2 text-muted-foreground">
-                <li>{t("compromiso")}</li>
-                <li>{t("puntualidad")}</li>
-                <li>{t("innovacion")}</li>
-    
-                <li>{t("responsabilidad")}</li>
-                <li>{t("trabajoEquipo")}</li>
-                <li>{t("transparencia")}</li>
-                <li>{t("excelenciaOperativa")}</li>
-              </ul>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-2 text-muted-foreground">
+              <div>{t("compromiso")}</div>
+              <div>{t("puntualidad")}</div>
+              <div>{t("innovacion")}</div>
+              <div>{t("responsabilidad")}</div>
+              <div>{t("trabajoEquipo")}</div>
+              <div>{t("transparencia")}</div>
+              <div>{t("excelenciaOperativa")}</div>
+            </div>
             </div>
           </div>
         </div>
@@ -311,7 +309,7 @@ export default function Home() {
       <SpecializedIndustries />
 
       {/* Value Added Section */}
-    <ValoresSection />
+    
       <section id="value" className="w-full py-12 md:py-24 lg:py-32">
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
