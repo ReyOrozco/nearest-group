@@ -46,7 +46,7 @@ export default function MaritimeLogisticsPage() {
               <img
                 src="/logo-nearest.png"
                 alt="Nearest Group Logo"
-                className="h-12 w-auto"
+                className="h-32 w-auto"
                 onError={(e) => {
                   e.currentTarget.style.display = "none"
                   e.currentTarget.nextElementSibling.style.display = "flex"
@@ -302,7 +302,7 @@ export default function MaritimeLogisticsPage() {
                 alt="Multimodal Service"
                 className="aspect-video overflow-hidden rounded-xl object-cover object-center"
                 height="310"
-                src="https://crepkozegpevqpyh.public.blob.vercel-storage.com/29.jpg"
+                src="https://crepkozegpevqpyh.public.blob.vercel-storage.com/SLI4.jpg"
                 width="550"
               />
             </div>

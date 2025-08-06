@@ -46,7 +46,7 @@ export default function TerrestrialLogisticsPage() {
               <img
                 src="/logo-nearest.png"
                 alt="Nearest Group Logo"
-                className="h-12 w-auto"
+                className="h-32 w-auto"
                 onError={(e) => {
                   e.currentTarget.style.display = "none"
                   e.currentTarget.nextElementSibling.style.display = "flex"
@@ -158,7 +158,7 @@ export default function TerrestrialLogisticsPage() {
                 alt="Logística Terrestre"
                 className="aspect-video overflow-hidden rounded-xl object-cover object-center"
                 height="310"
-                src="https://crepkozegpevqpyh.public.blob.vercel-storage.com/6.png"
+                src="https://crepkozegpevqpyh.public.blob.vercel-storage.com/Portada.png"
                 width="550"
               />
             </div>

@@ -46,7 +46,7 @@ export default function AirLogisticsPage() {
               <img
                 src="/logo-nearest.png"
                 alt="Nearest Group Logo"
-                className="h-12 w-auto"
+                className="h-32 w-auto"
                 onError={(e) => {
                   e.currentTarget.style.display = "none"
                   e.currentTarget.nextElementSibling.style.display = "flex"
