@@ -4,7 +4,13 @@ import { createContext, useContext, useState, useEffect, type ReactNode } from "
 import { Button } from "@/components/ui/button"
 import { Check, ChevronDown } from "lucide-react"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
-import { ValoresSection } from "@/components/valores-section"
+"use client"
+
+import { createContext, useContext, useState, useEffect, type ReactNode } from "react"
+import { Button } from "@/components/ui/button"
+import { Check, ChevronDown } from "lucide-react"
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
+
 
 // Definir el tipo para las traducciones
 type Translations = {

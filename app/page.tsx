@@ -13,9 +13,9 @@ import { SiteHeader } from "./components/site-header"
 import { ClientReviews } from "./components/client-reviews"
 import { OurClients } from "./components/our-clients"
 import { SpecializedIndustries } from "./components/specialized-industries"
-import { ValoresSection } from "./components/valores-section"
 import { useLanguage } from "./components/language-toggle"
 import { WhatsappButton } from "./components/whatsapp-button"
+import { ValoresSection } from "./components/valores-section"
 
 export default function Home() {
   const { t } = useLanguage()
@@ -286,10 +286,12 @@ export default function Home() {
                 <CheckCircle className="h-6 w-6" />
                 <h3 className="text-xl font-bold">{t("valores")}</h3>
               </div>
+                  <ValoresSection />
               <ul className="space-y-2 text-muted-foreground">
                 <li>{t("compromiso")}</li>
                 <li>{t("puntualidad")}</li>
                 <li>{t("innovacion")}</li>
+    
                 <li>{t("responsabilidad")}</li>
                 <li>{t("trabajoEquipo")}</li>
                 <li>{t("transparencia")}</li>
