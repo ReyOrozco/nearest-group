@@ -14,38 +14,44 @@ interface Industry {
 export function SpecializedIndustries() {
   const { t } = useLanguage()
 
-  const industries: Industry[] = [
-    {
-      nameKey: "textilTitle",
-      descKey: "textilDesc",
-      icon: "https://crepkozegpevqpyh.public.blob.vercel-storage.com/ropa.png",
-      slug: "textil",
-    },
-    {
-      nameKey: "saludTitle",
-      descKey: "saludDesc",
-      icon: "https://crepkozegpevqpyh.public.blob.vercel-storage.com/personal-medico.png",
-      slug: "salud",
-    },
-    {
-      nameKey: "alimentosTitle",
-      descKey: "alimentosDesc",
-      icon: "https://crepkozegpevqpyh.public.blob.vercel-storage.com/refresco.png",
-      slug: "alimentos",
-    },
-    {
-      nameKey: "automotrizTitle",
-      descKey: "automotrizDesc",
-      icon: "https://crepkozegpevqpyh.public.blob.vercel-storage.com/Automotriz.png",
-      slug: "automotriz",
-    },
-    {
-      nameKey: "electronicaTitle",
-      descKey: "electronicaDesc",
-      icon: "https://crepkozegpevqpyh.public.blob.vercel-storage.com/Electronica.png",
-      slug: "electronica",
-    },
-  ]
+ const industries: Industry[] = [
+  {
+    nameKey: "textilTitle",
+    descKey: "textilDesc",
+    icon: "https://crepkozegpevqpyh.public.blob.vercel-storage.com/ropa.png",
+    slug: "textil",
+  },
+  {
+    nameKey: "saludTitle",
+    descKey: "saludDesc",
+    icon: "https://crepkozegpevqpyh.public.blob.vercel-storage.com/personal-medico.png",
+    slug: "salud",
+  },
+  {
+    nameKey: "alimentosTitle",
+    descKey: "alimentosDesc",
+    icon: "https://crepkozegpevqpyh.public.blob.vercel-storage.com/refresco.png",
+    slug: "alimentos",
+  },
+  {
+    nameKey: "automotrizTitle",
+    descKey: "automotrizDesc",
+    icon: "https://crepkozegpevqpyh.public.blob.vercel-storage.com/Automotriz.png",
+    slug: "automotriz",
+  },
+  {
+    nameKey: "electronicaTitle",
+    descKey: "electronicaDesc",
+    icon: "https://crepkozegpevqpyh.public.blob.vercel-storage.com/Electronica.png",
+    slug: "electronica",
+  },
+  {
+    nameKey: "papelTitle", // NUEVA INDUSTRIA
+    descKey: "papelDesc",
+    icon: "https://crepkozegpevqpyh.public.blob.vercel-storage.com/papel.png",
+    slug: "papel",
+  },
+]
 
   return (
     <section id="industries" className="w-full py-12 md:py-24 lg:py-32 bg-muted/30">

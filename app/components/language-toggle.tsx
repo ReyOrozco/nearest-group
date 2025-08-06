@@ -4,6 +4,7 @@ import { createContext, useContext, useState, useEffect, type ReactNode } from "
 import { Button } from "@/components/ui/button"
 import { Check, ChevronDown } from "lucide-react"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
+import { ValoresSection } from "@/components/valores-section"
 
 // Definir el tipo para las traducciones
 type Translations = {
@@ -91,6 +92,7 @@ const translations: Translations = {
     es: "Ser reconocidos como el socio logístico más confiable y eficiente en el mercado, expandiendo nuestra presencia global.",
     en: "To be recognized as the most reliable and efficient logistics partner in the market, expanding our global presence.",
   },
+ 
   valores: { es: "Valores", en: "Values" },
   compromiso: { es: "Compromiso", en: "Commitment" },
   puntualidad: { es: "Puntualidad", en: "Punctuality" },
@@ -162,6 +164,12 @@ const translations: Translations = {
     en: "Security protocols and adaptive capacity for technological products.",
   },
   verMas: { es: "Ver más", en: "See more" },
+ 
+  papelTitle: { es: "Papel y Derivados", en: "Paper and Related Products" },
+  papelDesc: {
+  es: "Logística especializada para papel, cartón y productos derivados, con manejo cuidadoso y almacenamiento seguro.",
+  en: "Specialized logistics for paper, cardboard, and related products with careful handling and secure storage.",
+},
 
   // Nuestra Capacidad
   capacidadTitle: { es: "Nuestra Capacidad", en: "Our Capacity" },
