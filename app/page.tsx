@@ -260,13 +260,19 @@ export default function Home() {
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">{t("quienesSomosTitle")}</h2>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+                {t("quienesSomosTitle")}
+              </h2>
               <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                 {t("quienesSomosDesc")}
               </p>
             </div>
           </div>
-          <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-3 lg:gap-12">
+
+          {/* Grid de Misión, Visión, Valores */}
+          <div className="mx-auto grid max-w-5xl items-start gap-6 py-12 lg:grid-cols-3 lg:gap-12">
+            
+            {/* Misión */}
             <div className="flex flex-col justify-center space-y-4">
               <div className="flex items-center space-x-2 text-primary">
                 <MapPin className="h-6 w-6" />
@@ -274,6 +280,8 @@ export default function Home() {
               </div>
               <p className="text-muted-foreground">{t("misionDesc")}</p>
             </div>
+
+            {/* Visión */}
             <div className="flex flex-col justify-center space-y-4">
               <div className="flex items-center space-x-2 text-primary">
                 <Globe className="h-6 w-6" />
@@ -281,12 +289,15 @@ export default function Home() {
               </div>
               <p className="text-muted-foreground">{t("visionDesc")}</p>
             </div>
-            <div className="flex flex-col justify-center space-y-4">
-              <div className="flex items-center space-x-2 text-primary">
-                <CheckCircle className="h-6 w-6" />
-                <h3 className="text-xl font-bold">{t("valores")}</h3>
-              </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-2 text-muted-foreground">
+
+            {/* Valores */}
+            <div className="flex flex-col justify-center ml-6 space-y-4">
+            <div className="flex items-center space-x-2 text-primary">
+              <CheckCircle className="h-6 w-6" />
+              <h3 className="text-xl font-bold">{t("valores")}</h3>
+            </div>
+
+            <div className="grid grid-cols-2 gap-x-8 gap-y-1 text-muted-foreground">
               <div>{t("compromiso")}</div>
               <div>{t("puntualidad")}</div>
               <div>{t("innovacion")}</div>
@@ -295,7 +306,7 @@ export default function Home() {
               <div>{t("transparencia")}</div>
               <div>{t("excelenciaOperativa")}</div>
             </div>
-            </div>
+          </div>
           </div>
         </div>
       </section>

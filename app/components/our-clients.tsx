@@ -23,7 +23,7 @@ export function OurClients() {
     { name: "gondi", logo: "https://crepkozegpevqpyh.public.blob.vercel-storage.com/gondi.webp" },
     { name: "Gairet", logo: "https://crepkozegpevqpyh.public.blob.vercel-storage.com/Gairet.webp" },
     { name: "osman", logo: "https://crepkozegpevqpyh.public.blob.vercel-storage.com/osman.webp" },
-    { name: "phoeix", logo: "https://crepkozegpevqpyh.public.blob.vercel-storage.com/phoeix.webp" },
+    { name: "phoeix", logo: "https://crepkozegpevqpyh.public.blob.vercel-storage.com/phoeix.jpeg" },
     { name: "PISA", logo: "https://crepkozegpevqpyh.public.blob.vercel-storage.com/PISA.webp" },
     { name: "psf", logo: "https://crepkozegpevqpyh.public.blob.vercel-storage.com/psf.webp" },
     { name: "RB", logo: "https://crepkozegpevqpyh.public.blob.vercel-storage.com/RB.webp" },
@@ -31,6 +31,7 @@ export function OurClients() {
     { name: "smurfit", logo: "https://crepkozegpevqpyh.public.blob.vercel-storage.com/smurfit.webp" },
     { name: "Torrecid", logo: "https://crepkozegpevqpyh.public.blob.vercel-storage.com/Torrecid.webp" },
     { name: "westrock", logo: "https://crepkozegpevqpyh.public.blob.vercel-storage.com/westrock.webp" },
+    { name: "biopappel", logo: "https://crepkozegpevqpyh.public.blob.vercel-storage.com/biopappel-logo.jpg" },
   ]
 
   return (
