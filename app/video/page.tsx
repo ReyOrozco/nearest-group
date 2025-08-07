@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { useEffect, useRef, useState } from "react"
-import { ChevronDown, Menu, Volume2, VolumeX, X } from "lucide-react"
+import { ChevronDown, Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import {
   DropdownMenu,
@@ -16,35 +16,13 @@ const VIDEO_WEBM =
 
 export default function VideoPresentationPage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [isMuted, setIsMuted] = useState(true)
   const videoRef = useRef<HTMLVideoElement | null>(null)
 
   useEffect(() => {
-    // Intento de reproducción automática al montar
     const v = videoRef.current
     if (!v) return
-    v.muted = true
-    v.play().catch(() => {
-      // Si el navegador bloquea, no hacemos nada: el usuario verá el botón de play/controls
-    })
+    v.play().catch(() => {})
   }, [])
-
-  const toggleMute = async () => {
-    const v = videoRef.current
-    if (!v) return
-    const nextMuted = !isMuted
-    setIsMuted(nextMuted)
-    v.muted = nextMuted
-    try {
-      // Aseguramos reproducción al quitar mute
-      if (!nextMuted) {
-        if (v.paused) await v.play()
-        v.volume = 1
-      }
-    } catch {
-      // Silencio elegante si falla
-    }
-  }
 
   const navLinks = [
     { name: "Inicio", href: "/", hasSubmenu: false },
@@ -165,8 +143,6 @@ export default function VideoPresentationPage() {
               </nav>
             </div>
           )}
-
-          <div className="flex items-center space-x-4" />
         </div>
       </header>
 
@@ -176,12 +152,12 @@ export default function VideoPresentationPage() {
         className="flex-1 flex items-center justify-center py-16 px-2 md:px-0 bg-gradient-to-br from-background to-slate-100"
       >
         <div className="container mx-auto max-w-5xl rounded-2xl shadow-2xl bg-white/95 p-0 md:p-8 grid grid-cols-1 lg:grid-cols-12 gap-8">
-          <div className="lg:col-span-8 relative">
+          <div className="lg:col-span-8 flex flex-col justify-center">
             <div className="overflow-hidden rounded-2xl border bg-black/90 shadow-lg">
               <video
                 ref={videoRef}
                 autoPlay
-                muted={isMuted}
+                muted
                 controls
                 preload="metadata"
                 className="aspect-video w-full transition-all duration-200 hover:shadow-2xl"
@@ -194,25 +170,11 @@ export default function VideoPresentationPage() {
                 {"Tu navegador no soporta el elemento de video."}
               </video>
             </div>
-
-            {/* Botón flotante para (des)mutear */}
-            <button
-              onClick={toggleMute}
-              className="absolute bottom-4 left-4 inline-flex items-center gap-2 rounded-full bg-white/90 px-4 py-2 text-sm font-medium shadow-md hover:bg-white transition"
-              aria-label={isMuted ? "Activar sonido" : "Silenciar video"}
-            >
-              {isMuted ? <VolumeX size={16} /> : <Volume2 size={16} />}
-              {isMuted ? "Activar sonido" : "Silenciar"}
-            </button>
           </div>
-
           <div className="lg:col-span-4 flex flex-col justify-center space-y-7 px-4 md:px-0">
             <h2 className="text-3xl font-bold tracking-tight text-primary">Acerca del video</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
               Prepárate para descubrir cómo <span className="font-semibold text-primary">Nearest Group</span> transforma la logística: capacidades operativas, soluciones innovadoras y casos de éxito reales.
-              <br />
-              <br />
-              <span className="font-semibold">Activa el audio y da play. No te quedes fuera de la evolución logística.</span>
               <br />
               <br />
               ¿Te interesa implementarlo en tu empresa?
