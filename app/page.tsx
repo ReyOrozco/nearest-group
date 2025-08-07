@@ -3,7 +3,7 @@
 import type React from "react"
 
 import Link from "next/link"
-import { CheckCircle, Globe, MapPin, Package, Plane, Ship, Truck } from "lucide-react"
+import { CheckCircle, Globe, MapPin, Package, Plane, Ship, Truck } from 'lucide-react'
 import { useState } from "react"
 
 
@@ -16,6 +16,7 @@ import { SpecializedIndustries } from "./components/specialized-industries"
 import { useLanguage } from "./components/language-toggle"
 import { WhatsappButton } from "./components/whatsapp-button"
 import { ValoresSection } from "./components/valores-section"
+import { FloatingVideoButton } from "./components/floating-video-button"
 
 export default function Home() {
   const { t } = useLanguage()
@@ -746,6 +747,7 @@ export default function Home() {
         </div>
       </footer>
 
+      <FloatingVideoButton />
       <WhatsappButton />
     </div>
   )
