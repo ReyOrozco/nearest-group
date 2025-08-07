@@ -63,7 +63,7 @@ export default function FoodIndustryPage() {
                   alt={language === "es" ? "Logística para Alimentos y Bebidas" : "Logistics for Food and Beverages"}
                   className="aspect-video overflow-hidden rounded-xl object-cover object-center"
                   height="310"
-                  src="https://crepkozegpevqpyh.public.blob.vercel-storage.com/01Alimentos.png" // Asegúrate de agregar esta imagen en /public/images
+                  src="https://crepkozegpevqpyh.public.blob.vercel-storage.com/Logistica-alimentaria%20%281%29.webp" // Asegúrate de agregar esta imagen en /public/images
                   width="550"
                 />
               </div>
