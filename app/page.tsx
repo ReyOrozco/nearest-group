@@ -129,38 +129,32 @@ export default function Home() {
               </p>
             </div>
 
-            {/* VALORES – versión humana */}
-            <div className="space-y-4">
-              <div className="flex items-center gap-2 text-primary">
-                <CheckCircle className="h-6 w-6" />
-                <h3 className="text-xl font-bold">{t("valores")}</h3>
+            {/* Valores */}
+            <div className="flex flex-col justify-center space-y-4">
+              {/* Título centrado */}
+              <div className="flex justify-center text-primary">
+                <h3 className="text-xl font-bold text-center">{t("valores")}</h3>
               </div>
 
-              <p className="text-sm text-muted-foreground">
+              {/* Texto humano */}
+              <p className="text-center text-sm text-muted-foreground">
                 Así es como trabajamos todos los días, con nuestros clientes y entre nosotros.
               </p>
 
-              <div className="grid grid-cols-2 gap-x-6 gap-y-4">
-                {[
-                  "compromiso",
-                  "puntualidad",
-                  "innovacion",
-                  "responsabilidad",
-                  "trabajoEquipo",
-                  "transparencia",
-                  "excelenciaOperativa",
-                ].map((key) => (
-                  <div
-                    key={key}
-                    className="flex items-center gap-3 text-muted-foreground"
-                  >
-                    <CheckCircle className="h-4 w-4 text-primary" />
-                    <span className="text-sm">{t(key)}</span>
-                  </div>
-                ))}
+              {/* Lista de valores SIN iconos */}
+              <div className="grid grid-cols-2 gap-x-8 gap-y-2 text-muted-foreground text-sm">
+                <div className="text-center">{t("compromiso")}</div>
+                <div className="text-center">{t("puntualidad")}</div>
+                <div className="text-center">{t("innovacion")}</div>
+                <div className="text-center">{t("responsabilidad")}</div>
+                <div className="text-center">{t("trabajoEquipo")}</div>
+                <div className="text-center">{t("transparencia")}</div>
+                <div className="col-span-2 text-center">
+                  {t("excelenciaOperativa")}
+                </div>
               </div>
             </div>
-          </div>
+
         </div>
       </section>
 
