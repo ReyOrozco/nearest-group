@@ -77,20 +77,23 @@ export default function Home() {
             "url(https://crepkozegpevqpyh.public.blob.vercel-storage.com/Portada_2026.jpg)",
         }}
       >
+        {/* Overlay / sombra elegante SOLO para mejorar contraste */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/55 via-black/25 to-transparent"></div>
+
         <div className="container relative z-10 grid max-w-6xl gap-12 md:grid-cols-2">
           <div>
-            <h1 className="mb-6 text-4xl font-extrabold md:text-5xl text-[#00B5F5] leading-tight">
+            <h1 className="mb-6 text-4xl font-extrabold md:text-5xl text-[#00B5F5] leading-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.85)]">
               {t("heroTitle")}
             </h1>
 
-            <p className="mb-10 max-w-md text-lg md:text-xl text-white/95 leading-relaxed">
+            <p className="mb-10 max-w-md text-lg md:text-xl text-white/95 leading-relaxed drop-shadow-[0_2px_6px_rgba(0,0,0,0.85)]">
               {t("heroSubtitle")}
             </p>
 
             <Button
               asChild
               size="lg"
-              className="bg-[#00B5F5] text-white hover:bg-[#00A3DD] transition-colors"
+              className="bg-[#00B5F5] text-white hover:bg-[#00A3DD] transition-colors shadow-lg"
             >
               <Link href="/#contact">
                 {t("solicitarCotizacion")} →
@@ -134,17 +137,15 @@ export default function Home() {
                 {t("visionDesc")}
               </p>
             </div>
-            {/* Valores */}
+
+            {/* VALORES */}
             <div className="flex flex-col items-center space-y-4">
-              {/* Encabezado con icono */}
               <div className="flex items-center space-x-2 text-primary">
                 <CheckCircle className="h-6 w-6" />
                 <h3 className="text-xl font-bold">{t("valores")}</h3>
               </div>
 
-              {/* Valores: 4 arriba / 3 abajo, todo centrado */}
               <div className="flex flex-col items-center gap-2 text-sm text-muted-foreground">
-                {/* Fila 1 */}
                 <div className="flex gap-8">
                   <span>{t("compromiso")}</span>
                   <span>{t("puntualidad")}</span>
@@ -152,7 +153,6 @@ export default function Home() {
                   <span>{t("responsabilidad")}</span>
                 </div>
 
-                {/* Fila 2 */}
                 <div className="flex gap-8">
                   <span>{t("trabajoEquipo")}</span>
                   <span>{t("transparencia")}</span>
