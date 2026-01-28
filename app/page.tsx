@@ -82,7 +82,7 @@ export default function Home() {
 
         <div className="container relative z-10 grid max-w-6xl gap-12 md:grid-cols-2">
           <div>
-            <h1 className="mb-6 text-4xl font-extrabold md:text-5xl text-[#00B5F5] leading-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.85)]">
+            <h1 className="mb-6 text-4xl font-extrabold md:text-5xl text-[#00B5F5] leading-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.85)] text-input">
               {t("heroTitle")}
             </h1>
 
