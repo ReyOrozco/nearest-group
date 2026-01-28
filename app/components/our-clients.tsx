@@ -12,7 +12,7 @@ export function OurClients() {
     { name: "Whirlpool", logo: "https://crepkozegpevqpyh.public.blob.vercel-storage.com/Whirlpool_Corporation_Logo.png" },
     { name: "Audi", logo: "https://crepkozegpevqpyh.public.blob.vercel-storage.com/Audi.png" },
     { name: "Ternium", logo: "https://crepkozegpevqpyh.public.blob.vercel-storage.com/Ternium_Logo.svg.png" },
-    { name: "Herdez", logo: "https://crepkozegpevqpyh.public.blob.vercel-storage.com/Herdez-logo_red-2.png" },
+    { name: "Smurfit_Westrock", logo: "https://crepkozegpevqpyh.public.blob.vercel-storage.com/skg_logo.svg" },
     { name: "American Standard", logo: "https://crepkozegpevqpyh.public.blob.vercel-storage.com/American-Standard-Logo-2013n.png" },
     { name: "Del Valle", logo: "https://crepkozegpevqpyh.public.blob.vercel-storage.com/sales-del-valle.png" },
     { name: "Envases", logo: "https://crepkozegpevqpyh.public.blob.vercel-storage.com/envases_rgb600x400px.png" },
