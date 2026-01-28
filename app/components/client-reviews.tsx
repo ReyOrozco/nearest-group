@@ -125,15 +125,15 @@ export function ClientReviews() {
         </div>
 
         {/* Review Card */}
-        <div className="mx-auto max-w-4xl py-12">
+        <div className="mx-auto max-w-6xl py-12">
           <Card className="border-none bg-muted/50 shadow-none">
-            <CardContent className="p-6 sm:p-10">
-              <div className="flex flex-col md:flex-row items-start gap-6">
+            <CardContent className="p-8 sm:p-12">
+              <div className="flex flex-col md:flex-row items-start gap-8">
                 {/* Imagen rectangular */}
                 <img
                   alt={reviews[currentReview].name}
                   src={reviews[currentReview].image || "/placeholder.svg"}
-                  className="h-28 w-24 rounded-lg object-cover shrink-0"
+                  className="h-32 w-28 rounded-lg object-cover shrink-0"
                 />
 
                 {/* Texto */}
@@ -159,7 +159,7 @@ export function ClientReviews() {
             </CardContent>
           </Card>
 
-          {/* Controles */}
+          {/* Controls */}
           <div className="mt-6 flex justify-center space-x-4">
             <Button
               variant="outline"
