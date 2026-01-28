@@ -133,9 +133,9 @@ export default function Home() {
                 <Globe className="h-6 w-6" />
                 <h3 className="text-xl font-bold">{t("vision")}</h3>
               </div>
-              <p className="text-muted-foreground">
-                {t("visionDesc")}
-              </p>
+               <p className="text-muted-foreground text-justify leading-relaxed">
+                  {t("misionDesc")}
+                </p>
             </div>
 
             {/* VALORES */}
