@@ -65,7 +65,7 @@ export default function Home() {
   }
 
   return (
-    <div className="flex min-h-screen flex-col bg-white text-slate-800">
+    <div className="flex min-h-screen flex-col">
       <SiteHeader />
 
       {/* HERO */}
@@ -77,29 +77,15 @@ export default function Home() {
             "url(https://crepkozegpevqpyh.public.blob.vercel-storage.com/Portada_2026.jpg)",
         }}
       >
-        {/* Overlay claro */}
-        <div className="absolute inset-0 bg-white/80"></div>
-
         <div className="container relative z-10 grid max-w-6xl gap-12 md:grid-cols-2">
           <div>
-            <h1 className="mb-6 text-4xl font-extrabold md:text-5xl text-[#00B5F5]">
+            <h1 className="mb-6 text-4xl font-extrabold text-white md:text-5xl">
               {t("heroTitle")}
             </h1>
-
-            <p
-              className="max-w-md mb-10 text-xl tracking-tight text-slate-700"
-              style={{
-                textShadow: "0 1px 2px rgba(255,255,255,0.8)",
-              }}
-            >
+            <p className="mb-8 max-w-md text-white/90">
               {t("heroSubtitle")}
             </p>
-
-            <Button
-              asChild
-              size="lg"
-              className="bg-[#00B5F5] text-white hover:bg-[#00A3DD]"
-            >
+            <Button asChild size="lg">
               <Link href="/#contact">
                 {t("solicitarCotizacion")} →
               </Link>
@@ -109,13 +95,13 @@ export default function Home() {
       </section>
 
       {/* ABOUT */}
-      <section id="about" className="w-full py-12 md:py-24 bg-white">
+      <section id="about" className="w-full py-12 md:py-24">
         <div className="container max-w-5xl">
           <div className="mb-12 text-center">
-            <h2 className="text-3xl font-bold md:text-5xl text-[#00B5F5]">
+            <h2 className="text-3xl font-bold md:text-5xl">
               {t("quienesSomosTitle")}
             </h2>
-            <p className="mt-4 text-slate-600">
+            <p className="mt-4 text-muted-foreground">
               {t("quienesSomosDesc")}
             </p>
           </div>
@@ -123,41 +109,45 @@ export default function Home() {
           <div className="grid gap-12 lg:grid-cols-3">
             {/* MISIÓN */}
             <div className="space-y-4">
-              <div className="flex items-center gap-2 text-[#00B5F5]">
+              <div className="flex items-center gap-2 text-primary">
                 <MapPin className="h-6 w-6" />
                 <h3 className="text-xl font-bold">{t("mision")}</h3>
               </div>
-              <p className="text-slate-600">
+              <p className="text-muted-foreground">
                 {t("misionDesc")}
               </p>
             </div>
 
             {/* VISIÓN */}
             <div className="space-y-4">
-              <div className="flex items-center gap-2 text-[#00B5F5]">
+              <div className="flex items-center gap-2 text-primary">
                 <Globe className="h-6 w-6" />
                 <h3 className="text-xl font-bold">{t("vision")}</h3>
               </div>
-              <p className="text-slate-600">
+              <p className="text-muted-foreground">
                 {t("visionDesc")}
               </p>
             </div>
-
-            {/* VALORES */}
+            {/* Valores */}
             <div className="flex flex-col items-center space-y-4">
-              <div className="flex items-center gap-2 text-[#00B5F5]">
+              {/* Encabezado con icono */}
+              <div className="flex items-center space-x-2 text-primary">
                 <CheckCircle className="h-6 w-6" />
                 <h3 className="text-xl font-bold">{t("valores")}</h3>
               </div>
 
-              <div className="flex flex-col items-center gap-3 text-sm text-slate-600">
-                <div className="flex gap-6">
+              {/* Valores: 4 arriba / 3 abajo, todo centrado */}
+              <div className="flex flex-col items-center gap-2 text-sm text-muted-foreground">
+                {/* Fila 1 */}
+                <div className="flex gap-8">
                   <span>{t("compromiso")}</span>
                   <span>{t("puntualidad")}</span>
                   <span>{t("innovacion")}</span>
                   <span>{t("responsabilidad")}</span>
                 </div>
-                <div className="flex gap-6">
+
+                {/* Fila 2 */}
+                <div className="flex gap-8">
                   <span>{t("trabajoEquipo")}</span>
                   <span>{t("transparencia")}</span>
                   <span>{t("excelenciaOperativa")}</span>
