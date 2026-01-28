@@ -292,22 +292,22 @@ export default function Home() {
             </div>
 
             {/* Valores */}
-            <div className="flex flex-col justify-center ml-6 space-y-4">
-            <div className="flex items-center space-x-2 text-primary">
-              <CheckCircle className="h-6 w-6" />
-              <h3 className="text-xl font-bold">{t("valores")}</h3>
+            <div className="flex flex-col justify-center space-y-4">
+              <div className="flex items-center space-x-2 text-primary">
+                <CheckCircle className="h-6 w-6" />
+                <h3 className="text-xl font-bold">{t("valores")}</h3>
+              </div>
+              <p className="text-muted-foreground">{t("valoresDesc")}</p>
+              <div className="grid grid-cols-2 gap-x-8 gap-y-2 text-muted-foreground">
+                <div>{t("compromiso")}</div>
+                <div>{t("puntualidad")}</div>
+                <div>{t("innovacion")}</div>
+                <div>{t("responsabilidad")}</div>
+                <div>{t("trabajoEquipo")}</div>
+                <div>{t("transparencia")}</div>
+                <div>{t("excelenciaOperativa")}</div>
+              </div>
             </div>
-
-            <div className="grid grid-cols-2 gap-x-8 gap-y-1 text-muted-foreground">
-              <div>{t("compromiso")}</div>
-              <div>{t("puntualidad")}</div>
-              <div>{t("innovacion")}</div>
-              <div>{t("responsabilidad")}</div>
-              <div>{t("trabajoEquipo")}</div>
-              <div>{t("transparencia")}</div>
-              <div>{t("excelenciaOperativa")}</div>
-            </div>
-          </div>
           </div>
         </div>
       </section>
