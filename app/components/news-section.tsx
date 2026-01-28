@@ -48,11 +48,14 @@ export function NewsSection() {
   const { t, language } = useLanguage()
 
   const formatDate = (dateString: string) => {
-    const date = new Date(dateString)
+    // Parse as UTC to avoid timezone-related hydration mismatches
+    const [year, month, day] = dateString.split("-").map(Number)
+    const date = new Date(Date.UTC(year, month - 1, day))
     return new Intl.DateTimeFormat(language === "es" ? "es-MX" : "en-US", {
       year: "numeric",
       month: "long",
       day: "numeric",
+      timeZone: "UTC",
     }).format(date)
   }
 
