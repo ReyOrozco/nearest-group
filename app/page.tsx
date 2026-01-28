@@ -134,9 +134,7 @@ export default function Home() {
                 {t("valores")}
               </h3>
 
-              <p className="text-center text-sm text-muted-foreground">
-                Así es como trabajamos todos los días, con nuestros clientes y entre nosotros.
-              </p>
+              
 
               <div className="grid grid-cols-2 gap-x-8 gap-y-2 text-sm text-muted-foreground">
                 <div className="text-center">{t("compromiso")}</div>
