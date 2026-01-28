@@ -133,9 +133,6 @@ export default function Home() {
               <h3 className="text-center text-xl font-bold text-primary">
                 {t("valores")}
               </h3>
-
-              
-
               <div className="grid grid-cols-2 gap-x-8 gap-y-2 text-sm text-muted-foreground">
                 <div className="text-center">{t("compromiso")}</div>
                 <div className="text-center">{t("puntualidad")}</div>
