@@ -292,28 +292,26 @@ export default function Home() {
             </div>
 
             {/* Valores */}
-            <div className="flex flex-col justify-center space-y-4">
-              <div className="flex items-center space-x-2 text-primary">
-                <CheckCircle className="h-6 w-6" />
-                <h3 className="text-xl font-bold">{t("valores")}</h3>
-              </div>
-              
-              <div className="grid grid-cols-2 gap-x-6 gap-y-3">
-                {[
-                  "compromiso",
-                  "puntualidad",
-                  "innovacion",
-                  "responsabilidad",
-                  "trabajoEquipo",
-                  "transparencia",
-                  "excelenciaOperativa",
-                ].map((key) => (
-                  <div key={key} className="flex items-center gap-2 text-muted-foreground">
-                    <CheckCircle className="h-4 w-4 text-primary" />
-                    <span>{t(key)}</span>
-                  </div>
-                ))}
-              </div>
+           
+            <div>
+              <p className="font-semibold text-sm text-primary mb-2">Cultura</p>
+              <ul className="space-y-2 text-muted-foreground">
+                <li>{t("compromiso")}</li>
+                <li>{t("innovacion")}</li>
+                <li>{t("trabajoEquipo")}</li>
+              </ul>
+            </div>
+
+            <div>
+              <p className="font-semibold text-sm text-primary mb-2">Operación</p>
+              <ul className="space-y-2 text-muted-foreground">
+                <li>{t("puntualidad")}</li>
+                <li>{t("responsabilidad")}</li>
+                <li>{t("transparencia")}</li>
+              </ul>
+            </div>
+          </div>
+
             </div>
           </div>
         </div>
