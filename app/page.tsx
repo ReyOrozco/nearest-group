@@ -79,10 +79,10 @@ export default function Home() {
       >
         <div className="container relative z-10 grid max-w-6xl gap-12 md:grid-cols-2">
           <div>
-            <h1 className="mb-6 text-4xl font-extrabold text-white md:text-5xl">
+            <h1 className="mb-6 text-4xl font-extrabold md:text-5xl text-accent opacity-70">
               {t("heroTitle")}
             </h1>
-            <p className="mb-8 max-w-md text-white/90">
+            <p className="max-w-md text-[rgba(209,209,209,1)] mb-10 border-0 border-ring">
               {t("heroSubtitle")}
             </p>
             <Button asChild size="lg">
