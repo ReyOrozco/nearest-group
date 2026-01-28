@@ -74,42 +74,39 @@ export default function Home() {
           className="
             relative
             w-full
-            min-h-[70vh]
-            max-h-[85vh]
             bg-cover
             bg-center
             bg-no-repeat
+            py-16
+            md:py-24
           "
           style={{
             backgroundImage:
               "url(https://crepkozegpevqpyh.public.blob.vercel-storage.com/Portada_2026.jpg)",
           }}
         >
-          {/* Overlay para legibilidad */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black/55 via-black/30 to-transparent" />
+          {/* Overlay suave para contraste */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/35 to-transparent" />
 
-          {/* Contenido */}
-          <div className="relative z-10 h-full flex items-center">
-            <div className="container max-w-6xl grid md:grid-cols-2">
-              <div>
-                <h1 className="mb-6 text-4xl md:text-5xl font-extrabold text-[#00B5F5] drop-shadow-lg leading-tight">
-                  {t("heroTitle")}
-                </h1>
+          <div className="container relative z-10 grid max-w-6xl gap-12 md:grid-cols-2">
+            <div>
+              <h1 className="mb-6 text-4xl font-extrabold md:text-5xl text-[#00B5F5] leading-tight drop-shadow-lg">
+                {t("heroTitle")}
+              </h1>
 
-                <p className="mb-10 max-w-md text-lg md:text-xl text-white/95 drop-shadow-md leading-relaxed">
-                  {t("heroSubtitle")}
-                </p>
+              <p className="mb-10 max-w-md text-lg md:text-xl text-white/95 leading-relaxed drop-shadow-md">
+                {t("heroSubtitle")}
+              </p>
 
-                <Button
-                  asChild
-                  size="lg"
-                  className="bg-[#00B5F5] hover:bg-[#00A3DD] text-white shadow-lg"
-                >
-                  <Link href="/#contact">
-                    {t("solicitarCotizacion")} →
-                  </Link>
-                </Button>
-              </div>
+              <Button
+                asChild
+                size="lg"
+                className="bg-[#00B5F5] hover:bg-[#00A3DD] text-white shadow-lg transition-colors"
+              >
+                <Link href="/#contact">
+                  {t("solicitarCotizacion")} →
+                </Link>
+              </Button>
             </div>
           </div>
         </section>
