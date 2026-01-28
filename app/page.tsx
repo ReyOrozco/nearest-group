@@ -297,7 +297,7 @@ export default function Home() {
                 <CheckCircle className="h-6 w-6" />
                 <h3 className="text-xl font-bold">{t("valores")}</h3>
               </div>
-              <p className="text-muted-foreground">{t("valoresDesc")}</p>
+              
               <div className="grid grid-cols-2 gap-x-8 gap-y-2 text-muted-foreground">
                 <div>{t("compromiso")}</div>
                 <div>{t("puntualidad")}</div>
