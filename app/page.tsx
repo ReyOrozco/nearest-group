@@ -68,37 +68,42 @@ export default function Home() {
     <div className="flex min-h-screen flex-col">
       <SiteHeader />
 
-      {/* HERO */}
-        <section
-          id="hero"
-          className="relative w-full bg-contain bg-center bg-no-repeat py-16 md:py-24 bg-[#F5F7FA]"
-          style={{
-            backgroundImage:
-              "url(https://crepkozegpevqpyh.public.blob.vercel-storage.com/Portada_2026.jpg)",
-          }}
-        >
-        {/* Overlay / sombra elegante SOLO para mejorar contraste */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/55 via-black/25 to-transparent"></div>
+     {/* HERO */}
+      <section id="hero" className="relative w-full bg-[#F5F7FA]">
+        {/* Contenedor con proporción exacta de la imagen */}
+        <div className="relative w-full aspect-[16/9] max-h-[80vh] overflow-hidden">
+          <img
+            src="https://crepkozegpevqpyh.public.blob.vercel-storage.com/Portada_2026.jpg"
+            alt="Soluciones logísticas"
+            className="absolute inset-0 w-full h-full object-contain"
+          />
 
-        <div className="container relative z-10 grid max-w-6xl gap-12 md:grid-cols-2">
-          <div>
-            <h1 className="mb-6 text-4xl font-extrabold md:text-5xl text-[#00B5F5] leading-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.85)] text-input">
-              {t("heroTitle")}
-            </h1>
+          {/* Overlay lateral para legibilidad */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black/55 via-black/25 to-transparent"></div>
 
-            <p className="mb-10 max-w-md text-lg md:text-xl text-white/95 leading-relaxed drop-shadow-[0_2px_6px_rgba(0,0,0,0.85)]">
-              {t("heroSubtitle")}
-            </p>
+          {/* Contenido */}
+          <div className="relative z-10 h-full flex items-center">
+            <div className="container max-w-6xl grid md:grid-cols-2">
+              <div>
+                <h1 className="mb-6 text-4xl md:text-5xl font-extrabold text-[#00B5F5] drop-shadow-lg">
+                  {t("heroTitle")}
+                </h1>
 
-            <Button
-              asChild
-              size="lg"
-              className="bg-[#00B5F5] text-white hover:bg-[#00A3DD] transition-colors shadow-lg"
-            >
-              <Link href="/#contact">
-                {t("solicitarCotizacion")} →
-              </Link>
-            </Button>
+                <p className="mb-10 max-w-md text-lg md:text-xl text-white drop-shadow-md">
+                  {t("heroSubtitle")}
+                </p>
+
+                <Button
+                  asChild
+                  size="lg"
+                  className="bg-[#00B5F5] hover:bg-[#00A3DD] text-white shadow-lg"
+                >
+                  <Link href="/#contact">
+                    {t("solicitarCotizacion")} →
+                  </Link>
+                </Button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
