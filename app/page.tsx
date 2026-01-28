@@ -4,6 +4,7 @@ import type React from "react"
 import { useState } from "react"
 import Link from "next/link"
 import {
+  CheckCircle,
   Globe,
   MapPin,
   Package,
@@ -152,6 +153,7 @@ export default function Home() {
                   <span>{t("excelenciaOperativa")}</span>
                 </div>
               </div>
+            </div>
           </div>
         </div>
       </section>
