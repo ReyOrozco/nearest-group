@@ -4,7 +4,6 @@ import type React from "react"
 import { useState } from "react"
 import Link from "next/link"
 import {
-  CheckCircle,
   Globe,
   MapPin,
   Package,
@@ -79,7 +78,7 @@ export default function Home() {
       >
         <div className="container relative z-10 grid max-w-6xl gap-12 md:grid-cols-2">
           <div>
-            <h1 className="mb-6 text-4xl font-extrabold text-white drop-shadow-lg md:text-5xl">
+            <h1 className="mb-6 text-4xl font-extrabold text-white md:text-5xl">
               {t("heroTitle")}
             </h1>
             <p className="mb-8 max-w-md text-white/90">
@@ -129,20 +128,17 @@ export default function Home() {
               </p>
             </div>
 
-            {/* Valores */}
-            <div className="flex flex-col justify-center space-y-4">
-              {/* Título centrado */}
-              <div className="flex justify-center text-primary">
-                <h3 className="text-xl font-bold text-center">{t("valores")}</h3>
-              </div>
+            {/* VALORES */}
+            <div className="space-y-4">
+              <h3 className="text-center text-xl font-bold text-primary">
+                {t("valores")}
+              </h3>
 
-              {/* Texto humano */}
               <p className="text-center text-sm text-muted-foreground">
                 Así es como trabajamos todos los días, con nuestros clientes y entre nosotros.
               </p>
 
-              {/* Lista de valores SIN iconos */}
-              <div className="grid grid-cols-2 gap-x-8 gap-y-2 text-muted-foreground text-sm">
+              <div className="grid grid-cols-2 gap-x-8 gap-y-2 text-sm text-muted-foreground">
                 <div className="text-center">{t("compromiso")}</div>
                 <div className="text-center">{t("puntualidad")}</div>
                 <div className="text-center">{t("innovacion")}</div>
@@ -154,7 +150,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-
+          </div>
         </div>
       </section>
 
@@ -162,6 +158,7 @@ export default function Home() {
       <SpecializedIndustries />
       <ClientReviews />
       <NewsSection />
+
       <FloatingVideoButton />
       <WhatsappButton />
     </div>
