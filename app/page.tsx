@@ -292,26 +292,24 @@ export default function Home() {
             </div>
 
             {/* Valores */}
-           
-            <div>
-              <p className="font-semibold text-sm text-primary mb-2">Cultura</p>
-              <ul className="space-y-2 text-muted-foreground">
-                <li>{t("compromiso")}</li>
-                <li>{t("innovacion")}</li>
-                <li>{t("trabajoEquipo")}</li>
-              </ul>
-            </div>
-
-            <div>
-              <p className="font-semibold text-sm text-primary mb-2">Operación</p>
-              <ul className="space-y-2 text-muted-foreground">
-                <li>{t("puntualidad")}</li>
-                <li>{t("responsabilidad")}</li>
-                <li>{t("transparencia")}</li>
-              </ul>
-            </div>
-          </div>
-
+           <div className="grid grid-cols-2 gap-x-6 gap-y-4">
+              {[
+                "compromiso",
+                "puntualidad",
+                "innovacion",
+                "responsabilidad",
+                "trabajoEquipo",
+                "transparencia",
+                "excelenciaOperativa",
+              ].map((key) => (
+                <div
+                  key={key}
+                  className="flex items-center gap-3 text-muted-foreground"
+                >
+                  <CheckCircle className="h-4 w-4 text-primary shrink-0" />
+                  <span className="text-sm">{t(key)}</span>
+                </div>
+              ))}
             </div>
           </div>
         </div>
