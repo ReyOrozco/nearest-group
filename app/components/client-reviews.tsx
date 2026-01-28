@@ -133,7 +133,7 @@ export function ClientReviews() {
                 <img
                   alt={reviews[currentReview].name}
                   src={reviews[currentReview].image || "/placeholder.svg"}
-                  className="h-32 w-28 rounded-lg object-cover shrink-0"
+                  className="w-28 rounded-lg object-cover shrink-0 h-[256]"
                 />
 
                 {/* Texto */}
