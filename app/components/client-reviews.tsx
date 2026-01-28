@@ -18,7 +18,7 @@ export function ClientReviews() {
     textEn:
       "Nearest Group gave us full visibility into our routes. Today we make decisions with data, not assumptions.",
     image:
-      "https://crepkozegpevqpyh.public.blob.vercel-storage.com/Mar%C3%ADa%20Gonz%C3%A1lez.jpg",
+      "https://crepkozegpevqpyh.public.blob.vercel-storage.com/luis-herrera.jpg.png",
   },
   {
     name: "Ana Martínez",
@@ -27,7 +27,7 @@ export function ClientReviews() {
     textEn:
       "Traceability and temperature control were key for us. They deliver exactly what they promise.",
     image:
-      "https://crepkozegpevqpyh.public.blob.vercel-storage.com/Mar%C3%ADa%20Gonz%C3%A1lez.jpg",
+      "https://crepkozegpevqpyh.public.blob.vercel-storage.com/ana-martinez.png",
   },
   {
     name: "Jorge Salinas",
@@ -36,7 +36,7 @@ export function ClientReviews() {
     textEn:
       "We reduced incidents and claims in less than three months. The difference is operational, not just commercial.",
     image:
-      "https://crepkozegpevqpyh.public.blob.vercel-storage.com/Mar%C3%ADa%20Gonz%C3%A1lez.jpg",
+      "https://crepkozegpevqpyh.public.blob.vercel-storage.com/jorge-salinas.png",
   },
   {
     name: "Fernanda López",
@@ -54,7 +54,7 @@ export function ClientReviews() {
     textEn:
       "We integrated their services without stopping operations. That’s not common in logistics.",
     image:
-      "https://crepkozegpevqpyh.public.blob.vercel-storage.com/Mar%C3%ADa%20Gonz%C3%A1lez.jpg",
+      "https://crepkozegpevqpyh.public.blob.vercel-storage.com/fernanda-lopez.png",
   },
   {
     name: "Patricia Ríos",
@@ -63,7 +63,7 @@ export function ClientReviews() {
     textEn:
       "Real-time tracking gave us peace of mind with our international clients.",
     image:
-      "https://crepkozegpevqpyh.public.blob.vercel-storage.com/Mar%C3%ADa%20Gonz%C3%A1lez.jpg",
+      "https://crepkozegpevqpyh.public.blob.vercel-storage.com/patricia-rios.png",
   },
   {
     name: "Daniel Navarro",
@@ -72,7 +72,7 @@ export function ClientReviews() {
     textEn:
       "Flawless handling of sensitive cargo. Less waste, more trust.",
     image:
-      "https://crepkozegpevqpyh.public.blob.vercel-storage.com/Mar%C3%ADa%20Gonz%C3%A1lez.jpg",
+      "https://crepkozegpevqpyh.public.blob.vercel-storage.com/daniel-navarro.png",
   },
   {
     name: "Claudia Méndez",
@@ -81,7 +81,7 @@ export function ClientReviews() {
     textEn:
       "We went from firefighting to strategic planning. That changed everything.",
     image:
-      "https://crepkozegpevqpyh.public.blob.vercel-storage.com/Mar%C3%ADa%20Gonz%C3%A1lez.jpg",
+      "https://crepkozegpevqpyh.public.blob.vercel-storage.com/claudia-mendez.png",
   },
   {
     name: "Ricardo Peña",
@@ -90,7 +90,7 @@ export function ClientReviews() {
     textEn:
       "More organized border crossings and fewer surprises. Information arrives before problems.",
     image:
-      "https://crepkozegpevqpyh.public.blob.vercel-storage.com/Mar%C3%ADa%20Gonz%C3%A1lez.jpg",
+      "https://crepkozegpevqpyh.public.blob.vercel-storage.com/Carlos%20Rodr%C3%ADguez.jpg",
   },
   {
     name: "Sofía Castillo",
