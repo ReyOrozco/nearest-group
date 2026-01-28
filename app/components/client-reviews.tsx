@@ -90,7 +90,7 @@ export function ClientReviews() {
       textEn:
         "More organized border crossings and fewer surprises. Information arrives before problems.",
       image:
-        "https://crepkozegpevqpyh.public.blob.vercel-storage.com/Ricardo%20Pe%C3%B1a.jpg",
+        "https://crepkozegpevqpyh.public.blob.vercel-storage.com/pe%C3%B1a.png",
     },
     {
       name: "Sofía Castillo",
