@@ -79,13 +79,19 @@ export default function Home() {
       >
         <div className="container relative z-10 grid max-w-6xl gap-12 md:grid-cols-2">
           <div>
-            <h1 className="mb-6 text-4xl font-extrabold text-white md:text-5xl">
+            <h1 className="mb-6 text-4xl font-extrabold md:text-5xl text-[#00B5F5] leading-tight">
               {t("heroTitle")}
             </h1>
-            <p className="mb-8 max-w-md text-white/90">
+
+            <p className="mb-10 max-w-md text-lg md:text-xl text-white/95 leading-relaxed">
               {t("heroSubtitle")}
             </p>
-            <Button asChild size="lg">
+
+            <Button
+              asChild
+              size="lg"
+              className="bg-[#00B5F5] text-white hover:bg-[#00A3DD] transition-colors"
+            >
               <Link href="/#contact">
                 {t("solicitarCotizacion")} →
               </Link>
