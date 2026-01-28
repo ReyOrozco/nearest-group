@@ -73,7 +73,7 @@ export default function Home() {
         className="relative w-full bg-cover bg-center bg-no-repeat py-16 md:py-24"
         style={{
           backgroundImage:
-            "url(https://crepkozegpevqpyh.public.blob.vercel-storage.com/Portada_01%20%281%29.webp)",
+            "url(https://crepkozegpevqpyh.public.blob.vercel-storage.com/Portada_2026.jpg)",
         }}
       >
         <div className="container relative z-10 grid max-w-6xl gap-12 md:grid-cols-2">
