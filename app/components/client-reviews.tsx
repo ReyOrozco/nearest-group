@@ -10,35 +10,89 @@ export function ClientReviews() {
   const { t, language } = useLanguage()
   const [currentReview, setCurrentReview] = useState(0)
 
-  const reviews = [
+    const reviews = [
     {
-      name: "Carlos Rodríguez",
-      company: "Textiles Modernos S.A.",
-      text: "Nearest Group ha transformado nuestra cadena de suministro. Su atención al detalle y capacidad de respuesta son excepcionales.",
+      name: "Luis Herrera",
+      company: "Grupo Automotriz del Norte",
+      text: "Nearest Group nos dio visibilidad total de nuestras rutas. Hoy tomamos decisiones con datos, no con suposiciones.",
       textEn:
-        "Nearest Group has transformed our supply chain. Their attention to detail and responsiveness are exceptional.",
-      image:
-        "https://crepkozegpevqpyh.public.blob.vercel-storage.com/Carlos%20Rodr%C3%ADguez.jpg",
+        "Nearest Group gave us full visibility into our routes. Today we make decisions with data, not assumptions.",
+      image: "/clients/luis-herrera.jpg",
     },
     {
-      name: "María González",
-      company: "Alimentos Frescos Inc.",
-      text: "Desde que trabajamos con Nearest Group, nuestros tiempos de entrega se han reducido en un 40%. Un socio logístico confiable.",
+      name: "Ana Martínez",
+      company: "Farmacéutica Vitalis",
+      text: "La trazabilidad y el control de temperatura fueron clave para nosotros. Cumplen lo que prometen.",
       textEn:
-        "Since working with Nearest Group, our delivery times have been reduced by 40%. A reliable logistics partner.",
-      image:
-        "https://crepkozegpevqpyh.public.blob.vercel-storage.com/Mar%C3%ADa%20Gonz%C3%A1lez.jpg",
+        "Traceability and temperature control were key for us. They deliver exactly what they promise.",
+      image: "/clients/ana-martinez.jpg",
     },
     {
-      name: "Roberto Sánchez",
-      company: "Electrónica Avanzada",
-      text: "La capacidad de Nearest Group para manejar envíos delicados de componentes electrónicos ha sido fundamental para nuestro crecimiento.",
+      name: "Jorge Salinas",
+      company: "Distribuciones del Bajío",
+      text: "Redujimos incidencias y reclamos en menos de tres meses. La diferencia es operativa, no solo comercial.",
       textEn:
-        "Nearest Group's ability to handle delicate shipments of electronic components has been essential for our growth.",
-      image:
-        "https://crepkozegpevqpyh.public.blob.vercel-storage.com/Roberto.png",
+        "We reduced incidents and claims in less than three months. The difference is operational, not just commercial.",
+      image: "/clients/jorge-salinas.jpg",
     },
-  ]
+    {
+      name: "Fernanda López",
+      company: "Retail Express MX",
+      text: "Nearest Group entiende el ritmo del retail. Puntualidad, control y comunicación clara.",
+      textEn:
+        "Nearest Group understands the pace of retail. Punctuality, control, and clear communication.",
+      image: "/clients/fernanda-lopez.jpg",
+    },
+    {
+      name: "Miguel Torres",
+      company: "Manufacturas Industriales Atlas",
+      text: "Integramos sus servicios sin frenar la operación. Eso no es común en logística.",
+      textEn:
+        "We integrated their services without stopping operations. That’s not common in logistics.",
+      image: "/clients/miguel-torres.jpg",
+    },
+    {
+      name: "Patricia Ríos",
+      company: "Agroexportadora del Pacífico",
+      text: "El seguimiento en tiempo real nos dio tranquilidad con nuestros clientes internacionales.",
+      textEn:
+        "Real-time tracking gave us peace of mind with our international clients.",
+      image: "/clients/patricia-rios.jpg",
+    },
+    {
+      name: "Daniel Navarro",
+      company: "ElectroParts México",
+      text: "Manejo de carga sensible impecable. Menos mermas, más confianza.",
+      textEn:
+        "Flawless handling of sensitive cargo. Less waste, more trust.",
+      image: "/clients/daniel-navarro.jpg",
+    },
+    {
+      name: "Claudia Méndez",
+      company: "Consumo Masivo del Centro",
+      text: "Pasamos de apagar incendios a planear estratégicamente. Eso lo cambió todo.",
+      textEn:
+        "We went from firefighting to strategic planning. That changed everything.",
+      image: "/clients/claudia-mendez.jpg",
+    },
+    {
+      name: "Ricardo Peña",
+      company: "Logística Frontera Segura",
+      text: "Cruces más ordenados y menos sorpresas. La información llega antes que los problemas.",
+      textEn:
+        "More organized border crossings and fewer surprises. Information arrives before problems.",
+      image: "/clients/ricardo-pena.jpg",
+    },
+    {
+      name: "Sofía Castillo",
+      company: "E-commerce Supply Co.",
+      text: "Escalamos operaciones sin perder control. Justo lo que necesitábamos para crecer.",
+      textEn:
+        "We scaled operations without losing control. Exactly what we needed to grow.",
+      image: "/clients/sofia-castillo.jpg",
+    },
+]
+
 
   const nextReview = () => {
     setCurrentReview((prev) => (prev === reviews.length - 1 ? 0 : prev + 1))
