@@ -69,14 +69,14 @@ export default function Home() {
       <SiteHeader />
 
       {/* HERO */}
-      <section
-        id="hero"
-        className="relative w-full bg-cover bg-center bg-no-repeat py-16 md:py-24"
-        style={{
-          backgroundImage:
-            "url(https://crepkozegpevqpyh.public.blob.vercel-storage.com/Portada_2026.jpg)",
-        }}
-      >
+        <section
+          id="hero"
+          className="relative w-full bg-contain bg-center bg-no-repeat py-16 md:py-24 bg-[#F5F7FA]"
+          style={{
+            backgroundImage:
+              "url(https://crepkozegpevqpyh.public.blob.vercel-storage.com/Portada_2026.jpg)",
+          }}
+        >
         {/* Overlay / sombra elegante SOLO para mejorar contraste */}
         <div className="absolute inset-0 bg-gradient-to-r from-black/55 via-black/25 to-transparent"></div>
 
