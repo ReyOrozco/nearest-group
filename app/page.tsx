@@ -127,24 +127,31 @@ export default function Home() {
                 {t("visionDesc")}
               </p>
             </div>
+            {/* Valores */}
+            <div className="flex flex-col items-center space-y-4">
+              {/* Encabezado con icono */}
+              <div className="flex items-center space-x-2 text-primary">
+                <CheckCircle className="h-6 w-6" />
+                <h3 className="text-xl font-bold">{t("valores")}</h3>
+              </div>
 
-            {/* VALORES */}
-            <div className="space-y-4">
-              <h3 className="text-center text-xl font-bold text-primary">
-                {t("valores")}
-              </h3>
-              <div className="grid grid-cols-2 gap-x-8 gap-y-2 text-sm text-muted-foreground">
-                <div className="text-center">{t("compromiso")}</div>
-                <div className="text-center">{t("puntualidad")}</div>
-                <div className="text-center">{t("innovacion")}</div>
-                <div className="text-center">{t("responsabilidad")}</div>
-                <div className="text-center">{t("trabajoEquipo")}</div>
-                <div className="text-center">{t("transparencia")}</div>
-                <div className="col-span-2 text-center">
-                  {t("excelenciaOperativa")}
+              {/* Valores: 4 arriba / 3 abajo, todo centrado */}
+              <div className="flex flex-col items-center gap-2 text-sm text-muted-foreground">
+                {/* Fila 1 */}
+                <div className="flex gap-8">
+                  <span>{t("compromiso")}</span>
+                  <span>{t("puntualidad")}</span>
+                  <span>{t("innovacion")}</span>
+                  <span>{t("responsabilidad")}</span>
+                </div>
+
+                {/* Fila 2 */}
+                <div className="flex gap-8">
+                  <span>{t("trabajoEquipo")}</span>
+                  <span>{t("transparencia")}</span>
+                  <span>{t("excelenciaOperativa")}</span>
                 </div>
               </div>
-            </div>
           </div>
         </div>
       </section>
