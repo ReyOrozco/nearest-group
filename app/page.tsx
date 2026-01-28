@@ -79,12 +79,19 @@ export default function Home() {
       >
         <div className="container relative z-10 grid max-w-6xl gap-12 md:grid-cols-2">
           <div>
-            <h1 className="mb-6 text-4xl font-extrabold md:text-5xl text-accent opacity-70">
+            <h1 className="mb-6 text-4xl font-extrabold md:text-5xl opacity-100 text-[rgba(2,113,204,1)]">
               {t("heroTitle")}
             </h1>
-            <p className="max-w-md text-[rgba(209,209,209,1)] mb-10 border-0 border-ring">
-              {t("heroSubtitle")}
-            </p>
+           <p
+                className="max-w-md mb-10 border-0 border-ring text-[rgba(3,115,206,1)] tracking-tighter text-xl bg-[rgba(10,10,10,0.95)]"
+                style={{
+                  textShadow:
+                    "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000",
+                }}
+              
+                {t("heroSubtitle")}
+          </p>
+
             <Button asChild size="lg">
               <Link href="/#contact">
                 {t("solicitarCotizacion")} →
