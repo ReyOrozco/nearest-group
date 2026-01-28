@@ -139,27 +139,30 @@ export default function Home() {
             </div>
 
             {/* VALORES */}
-            <div className="flex flex-col items-center space-y-4">
-              <div className="flex items-center space-x-2 text-primary">
-                <CheckCircle className="h-6 w-6" />
-                <h3 className="text-xl font-bold">{t("valores")}</h3>
-              </div>
+              <div className="flex flex-col items-center space-y-6">
+                {/* Encabezado con icono */}
+                <div className="flex items-center gap-2 text-primary">
+                  <CheckCircle className="h-6 w-6" />
+                  <h3 className="text-xl font-bold text-center">
+                    {t("valores")}
+                  </h3>
+                </div>
 
-              <div className="flex flex-col items-center gap-2 text-sm text-muted-foreground">
-                <div className="flex gap-8">
+                {/* Contenido en 2 columnas centradas */}
+                <div className="grid grid-cols-2 gap-x-12 gap-y-3 text-sm text-muted-foreground text-center">
+                  {/* Columna 1 */}
                   <span>{t("compromiso")}</span>
+                  <span>{t("trabajoEquipo")}</span>
+
                   <span>{t("puntualidad")}</span>
+                  <span>{t("transparencia")}</span>
+
                   <span>{t("innovacion")}</span>
+                  <span>{t("excelenciaOperativa")}</span>
+
                   <span>{t("responsabilidad")}</span>
                 </div>
-
-                <div className="flex gap-8">
-                  <span>{t("trabajoEquipo")}</span>
-                  <span>{t("transparencia")}</span>
-                  <span>{t("excelenciaOperativa")}</span>
-                </div>
               </div>
-            </div>
           </div>
         </div>
       </section>
