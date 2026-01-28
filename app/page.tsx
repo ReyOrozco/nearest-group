@@ -65,7 +65,7 @@ export default function Home() {
   }
 
   return (
-    <div className="flex min-h-screen flex-col bg-black">
+    <div className="flex min-h-screen flex-col bg-white text-slate-800">
       <SiteHeader />
 
       {/* HERO */}
@@ -77,26 +77,19 @@ export default function Home() {
             "url(https://crepkozegpevqpyh.public.blob.vercel-storage.com/Portada_2026.jpg)",
         }}
       >
+        {/* Overlay claro */}
+        <div className="absolute inset-0 bg-white/80"></div>
+
         <div className="container relative z-10 grid max-w-6xl gap-12 md:grid-cols-2">
           <div>
-            <h1 className="mb-6 text-4xl font-extrabold md:text-5xl text-[#00B5F5] drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]">
+            <h1 className="mb-6 text-4xl font-extrabold md:text-5xl text-[#00B5F5]">
               {t("heroTitle")}
             </h1>
 
             <p
-              className="
-                max-w-md
-                mb-10
-                px-4 py-3
-                rounded-md
-                text-xl
-                tracking-tight
-                text-[#C9C9C9]
-                bg-black/60
-                backdrop-blur-sm
-              "
+              className="max-w-md mb-10 text-xl tracking-tight text-slate-700"
               style={{
-                textShadow: "0 2px 6px rgba(0,0,0,0.8)",
+                textShadow: "0 1px 2px rgba(255,255,255,0.8)",
               }}
             >
               {t("heroSubtitle")}
@@ -105,7 +98,7 @@ export default function Home() {
             <Button
               asChild
               size="lg"
-              className="bg-[#00B5F5] text-black hover:bg-[#00A3DD] transition-colors"
+              className="bg-[#00B5F5] text-white hover:bg-[#00A3DD]"
             >
               <Link href="/#contact">
                 {t("solicitarCotizacion")} →
@@ -116,13 +109,13 @@ export default function Home() {
       </section>
 
       {/* ABOUT */}
-      <section id="about" className="w-full py-12 md:py-24">
+      <section id="about" className="w-full py-12 md:py-24 bg-white">
         <div className="container max-w-5xl">
           <div className="mb-12 text-center">
             <h2 className="text-3xl font-bold md:text-5xl text-[#00B5F5]">
               {t("quienesSomosTitle")}
             </h2>
-            <p className="mt-4 text-[#C9C9C9]/90">
+            <p className="mt-4 text-slate-600">
               {t("quienesSomosDesc")}
             </p>
           </div>
@@ -134,7 +127,7 @@ export default function Home() {
                 <MapPin className="h-6 w-6" />
                 <h3 className="text-xl font-bold">{t("mision")}</h3>
               </div>
-              <p className="text-[#C9C9C9]/90">
+              <p className="text-slate-600">
                 {t("misionDesc")}
               </p>
             </div>
@@ -145,7 +138,7 @@ export default function Home() {
                 <Globe className="h-6 w-6" />
                 <h3 className="text-xl font-bold">{t("vision")}</h3>
               </div>
-              <p className="text-[#C9C9C9]/90">
+              <p className="text-slate-600">
                 {t("visionDesc")}
               </p>
             </div>
@@ -157,7 +150,7 @@ export default function Home() {
                 <h3 className="text-xl font-bold">{t("valores")}</h3>
               </div>
 
-              <div className="flex flex-col items-center gap-3 text-sm text-[#C9C9C9]">
+              <div className="flex flex-col items-center gap-3 text-sm text-slate-600">
                 <div className="flex gap-6">
                   <span>{t("compromiso")}</span>
                   <span>{t("puntualidad")}</span>
