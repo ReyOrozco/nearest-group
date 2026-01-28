@@ -298,14 +298,21 @@ export default function Home() {
                 <h3 className="text-xl font-bold">{t("valores")}</h3>
               </div>
               
-              <div className="grid grid-cols-2 gap-x-8 gap-y-2 text-muted-foreground">
-                <div>{t("compromiso")}</div>
-                <div>{t("puntualidad")}</div>
-                <div>{t("innovacion")}</div>
-                <div>{t("responsabilidad")}</div>
-                <div>{t("trabajoEquipo")}</div>
-                <div>{t("transparencia")}</div>
-                <div>{t("excelenciaOperativa")}</div>
+              <div className="grid grid-cols-2 gap-x-6 gap-y-3">
+                {[
+                  "compromiso",
+                  "puntualidad",
+                  "innovacion",
+                  "responsabilidad",
+                  "trabajoEquipo",
+                  "transparencia",
+                  "excelenciaOperativa",
+                ].map((key) => (
+                  <div key={key} className="flex items-center gap-2 text-muted-foreground">
+                    <CheckCircle className="h-4 w-4 text-primary" />
+                    <span>{t(key)}</span>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
