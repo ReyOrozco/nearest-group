@@ -18,10 +18,16 @@ import { SiteHeader } from "./components/site-header"
 import { NewsSection } from "./components/news-section"
 import { ClientReviews } from "./components/client-reviews"
 import { OurClients } from "./components/our-clients"
+import { OurCapacity } from "./components/our-capacity"
 import { SpecializedIndustries } from "./components/specialized-industries"
 import { useLanguage } from "./components/language-toggle"
 import { WhatsappButton } from "./components/whatsapp-button"
 import { FloatingVideoButton } from "./components/floating-video-button"
+import { ContactForm } from "./components/contact-form"
+import { ValoresSection } from "./components/valores-section"
+import { ServicesSection } from "./components/services-section"
+import { ValueAddedSection } from "./components/value-added-section"
+import { SuccessStories } from "./components/success-stories"
 
 export default function Home() {
   const { t } = useLanguage()
@@ -177,9 +183,21 @@ export default function Home() {
       </section>
 
       <OurClients />
+      <OurCapacity />
+      <ServicesSection />
+      <ValueAddedSection />
+      <ValoresSection />
+      <SuccessStories />
       <SpecializedIndustries />
       <ClientReviews />
       <NewsSection />
+      
+      {/* CONTACT SECTION */}
+      <section id="contact" className="w-full py-12 md:py-24 lg:py-32 bg-muted/30">
+        <div className="container max-w-6xl">
+          <ContactForm />
+        </div>
+      </section>
 
       <FloatingVideoButton />
       <WhatsappButton />

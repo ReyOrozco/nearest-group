@@ -1,8 +1,10 @@
 "use client"
 
+import Link from "next/link"
 import { useLanguage } from "./language-toggle"
 import { Card, CardContent } from "@/components/ui/card"
 import { motion } from "framer-motion"
+import { Button } from "@/components/ui/button"
 
 export function OurClients() {
   const { t } = useLanguage()
@@ -35,7 +37,7 @@ export function OurClients() {
   ]
 
   return (
-    <section className="w-full py-12 md:py-24 lg:py-32 bg-muted/30">
+    <section id="clients" className="w-full py-12 md:py-24 lg:py-32 bg-muted/30">
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
@@ -43,6 +45,16 @@ export function OurClients() {
             <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
               {t("empresasConfian")}
             </p>
+          </div>
+
+          {/* Navigation Buttons */}
+          <div className="flex flex-col sm:flex-row gap-3 justify-center mt-4">
+            <Button asChild variant="outline" size="sm">
+              <Link href="#success">Historias de Éxito</Link>
+            </Button>
+            <Button asChild size="sm" className="bg-primary hover:bg-primary/90">
+              <Link href="#clients">Nuestros Clientes</Link>
+            </Button>
           </div>
         </div>
 
