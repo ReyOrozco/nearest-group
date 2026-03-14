@@ -10,7 +10,6 @@ import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { AlertCircle, CheckCircle2, Loader2 } from "lucide-react"
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 
 export function ContactForm() {
   const { t } = useLanguage()
@@ -70,19 +69,23 @@ export function ContactForm() {
       </CardHeader>
       <CardContent>
         {submitStatus === "success" && (
-          <Alert className="mb-4 bg-green-50 text-green-800 border-green-200">
-            <CheckCircle2 className="h-4 w-4 text-green-600" />
-            <AlertTitle>¡Éxito!</AlertTitle>
-            <AlertDescription>{t("mensajeEnviado")}</AlertDescription>
-          </Alert>
+          <div className="mb-4 p-3 bg-green-50 text-green-800 border border-green-200 rounded flex items-start gap-2">
+            <CheckCircle2 className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
+            <div>
+              <div className="font-semibold">¡Éxito!</div>
+              <div className="text-sm">{t("mensajeEnviado")}</div>
+            </div>
+          </div>
         )}
 
         {submitStatus === "error" && (
-          <Alert className="mb-4 bg-red-50 text-red-800 border-red-200">
-            <AlertCircle className="h-4 w-4 text-red-600" />
-            <AlertTitle>Error</AlertTitle>
-            <AlertDescription>{t("errorEnvio")}</AlertDescription>
-          </Alert>
+          <div className="mb-4 p-3 bg-red-50 text-red-800 border border-red-200 rounded flex items-start gap-2">
+            <AlertCircle className="h-5 w-5 text-red-600 flex-shrink-0 mt-0.5" />
+            <div>
+              <div className="font-semibold">Error</div>
+              <div className="text-sm">{t("errorEnvio")}</div>
+            </div>
+          </div>
         )}
 
         <form onSubmit={handleSubmit} className="space-y-4">

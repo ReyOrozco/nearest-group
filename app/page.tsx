@@ -1,7 +1,6 @@
 "use client"
 
 import type React from "react"
-import { useState } from "react"
 import Link from "next/link"
 import {
   CheckCircle,
@@ -23,52 +22,10 @@ import { SpecializedIndustries } from "./components/specialized-industries"
 import { useLanguage } from "./components/language-toggle"
 import { WhatsappButton } from "./components/whatsapp-button"
 import { FloatingVideoButton } from "./components/floating-video-button"
-import { ContactForm } from "./components/contact-form"
 import { ValoresSection } from "./components/valores-section"
-import { ServicesSection } from "./components/services-section"
-import { ValueAddedSection } from "./components/value-added-section"
-import { SuccessStories } from "./components/success-stories"
 
 export default function Home() {
   const { t } = useLanguage()
-  const [isSubmitting, setIsSubmitting] = useState(false)
-
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-
-    const formData = new FormData(e.currentTarget)
-
-    const data = {
-      name: formData.get("name"),
-      company: formData.get("company"),
-      email: formData.get("email"),
-      phone: formData.get("phone"),
-      service: formData.get("service"),
-      origin: formData.get("origin"),
-      destination: formData.get("destination"),
-      message: formData.get("message"),
-    }
-
-    try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-      })
-
-      if (response.ok) {
-        alert("Mensaje enviado correctamente")
-        e.currentTarget.reset()
-      } else {
-        alert("Error al enviar el mensaje")
-      }
-    } catch {
-      alert("Error al enviar el mensaje")
-    } finally {
-      setIsSubmitting(false)
-    }
-  }
 
   return (
     <div className="flex min-h-screen flex-col">
@@ -184,20 +141,10 @@ export default function Home() {
 
       <OurClients />
       <OurCapacity />
-      <ServicesSection />
-      <ValueAddedSection />
       <ValoresSection />
-      <SuccessStories />
       <SpecializedIndustries />
       <ClientReviews />
       <NewsSection />
-      
-      {/* CONTACT SECTION */}
-      <section id="contact" className="w-full py-12 md:py-24 lg:py-32 bg-muted/30">
-        <div className="container max-w-6xl">
-          <ContactForm />
-        </div>
-      </section>
 
       <FloatingVideoButton />
       <WhatsappButton />
