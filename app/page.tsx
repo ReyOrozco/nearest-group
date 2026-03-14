@@ -23,6 +23,10 @@ import { useLanguage } from "./components/language-toggle"
 import { WhatsappButton } from "./components/whatsapp-button"
 import { FloatingVideoButton } from "./components/floating-video-button"
 import { ValoresSection } from "./components/valores-section"
+import { ServicesSection } from "./components/services-section"
+import { ValueAddedSection } from "./components/value-added-section"
+import { SuccessStories } from "./components/success-stories"
+import { ContactForm } from "./components/contact-form"
 
 export default function Home() {
   const { t } = useLanguage()
@@ -141,10 +145,20 @@ export default function Home() {
 
       <OurClients />
       <OurCapacity />
+      <ServicesSection />
+      <ValueAddedSection />
       <ValoresSection />
+      <SuccessStories />
       <SpecializedIndustries />
       <ClientReviews />
       <NewsSection />
+
+      {/* CONTACT SECTION */}
+      <section id="contact" className="w-full py-12 md:py-24 lg:py-32 bg-muted/30">
+        <div className="container max-w-lg mx-auto px-4 md:px-6">
+          <ContactForm />
+        </div>
+      </section>
 
       <FloatingVideoButton />
       <WhatsappButton />

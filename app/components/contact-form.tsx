@@ -15,9 +15,12 @@ export function ContactForm() {
   const { t } = useLanguage()
   const [formData, setFormData] = useState({
     name: "",
+    company: "",
     email: "",
     phone: "",
-    subject: "",
+    service: "",
+    origin: "",
+    destination: "",
     message: "",
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -46,9 +49,12 @@ export function ContactForm() {
         setSubmitStatus("success")
         setFormData({
           name: "",
+          company: "",
           email: "",
           phone: "",
-          subject: "",
+          service: "",
+          origin: "",
+          destination: "",
           message: "",
         })
       } else {
@@ -101,6 +107,16 @@ export function ContactForm() {
             />
           </div>
           <div className="space-y-2">
+            <Label htmlFor="company">{t("empresa")}</Label>
+            <Input
+              id="company"
+              name="company"
+              value={formData.company}
+              onChange={handleChange}
+              placeholder="Mi Empresa S.A."
+            />
+          </div>
+          <div className="space-y-2">
             <Label htmlFor="email">{t("correoElectronico")}</Label>
             <Input
               id="email"
@@ -124,15 +140,43 @@ export function ContactForm() {
             />
           </div>
           <div className="space-y-2">
-            <Label htmlFor="subject">{t("asunto")}</Label>
-            <Input
-              id="subject"
-              name="subject"
-              value={formData.subject}
+            <Label htmlFor="service">{t("tipoServicio")}</Label>
+            <select
+              id="service"
+              name="service"
+              value={formData.service}
               onChange={handleChange}
-              required
-              placeholder={t("asunto")}
-            />
+              className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+            >
+              <option value="">{t("seleccioneServicio")}</option>
+              <option value="terrestrial">{t("logisticaTerrestre")}</option>
+              <option value="air">{t("logisticaAerea")}</option>
+              <option value="maritime">{t("logisticaMaritima")}</option>
+              <option value="storage">{t("almacenamiento")}</option>
+              <option value="other">Otro</option>
+            </select>
+          </div>
+          <div className="grid grid-cols-2 gap-4">
+            <div className="space-y-2">
+              <Label htmlFor="origin">{t("origen")}</Label>
+              <Input
+                id="origin"
+                name="origin"
+                value={formData.origin}
+                onChange={handleChange}
+                placeholder="Ciudad de Origen"
+              />
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="destination">{t("destino")}</Label>
+              <Input
+                id="destination"
+                name="destination"
+                value={formData.destination}
+                onChange={handleChange}
+                placeholder="Ciudad de Destino"
+              />
+            </div>
           </div>
           <div className="space-y-2">
             <Label htmlFor="message">{t("mensaje")}</Label>
@@ -142,7 +186,7 @@ export function ContactForm() {
               value={formData.message}
               onChange={handleChange}
               required
-              placeholder={t("mensaje")}
+              placeholder={t("detallesAdicionales")}
               className="min-h-[120px]"
             />
           </div>
