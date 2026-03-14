@@ -337,6 +337,7 @@ const translations: Translations = {
   alimentos: { es: "Alimentos y Bebidas", en: "Food and Beverages" },
   automotriz: { es: "Automotriz", en: "Automotive" },
   electronica: { es: "Electrónica", en: "Electronics" },
+}
 
 // Crear el contexto para el idioma
 type LanguageContextType = {
