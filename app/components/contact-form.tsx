@@ -68,18 +68,7 @@ export function ContactForm() {
   return (
     <div className="w-full">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 bg-white rounded-lg shadow-xl overflow-hidden">
-        {/* LEFT COLUMN - CONTENT & DESCRIPTION */}
-        <div className="bg-white text-gray-900 p-8 md:p-12 lg:p-14 flex flex-col justify-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">Soluciones logísticas integrales para tu negocio</h2>
-          <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-            Ofrecemos servicios de logística terrestre, aérea, marítima y almacenamiento con cobertura nacional e internacional
-          </p>
-          <Button className="w-full md:w-auto h-12 bg-[#38b6ff] hover:bg-[#2a9dd9] text-white font-semibold rounded-lg">
-            Solicitar Cotización →
-          </Button>
-        </div>
-
-        {/* RIGHT COLUMN - CONTACT INFO */}
+        {/* LEFT COLUMN - CONTACT INFO */}
         <div className="bg-[#38b6ff] text-white p-8 md:p-12 lg:p-14 flex flex-col justify-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-12">Información de Contacto</h2>
           
@@ -151,6 +140,156 @@ export function ContactForm() {
               <p className="text-sm text-white font-semibold">Centro de monitoreo: 24/7</p>
             </div>
           </div>
+        </div>
+
+        {/* RIGHT COLUMN - FORM */}
+        <div className="p-8 md:p-12 lg:p-14 flex flex-col">
+          <div className="mb-8">
+            <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Envíanos un mensaje</h3>
+            <p className="text-gray-600 text-lg">Te responderemos en menos de 24 horas</p>
+          </div>
+
+          {submitStatus === "success" && (
+            <div className="mb-6 p-4 bg-green-50 text-green-800 border border-green-200 rounded-lg flex items-start gap-3">
+              <CheckCircle2 className="h-6 w-6 text-green-600 flex-shrink-0 mt-0.5" />
+              <div>
+                <div className="font-bold text-base">¡Éxito!</div>
+                <div className="text-sm">{t("mensajeEnviado")}</div>
+              </div>
+            </div>
+          )}
+
+          {submitStatus === "error" && (
+            <div className="mb-6 p-4 bg-red-50 text-red-800 border border-red-200 rounded-lg flex items-start gap-3">
+              <AlertCircle className="h-6 w-6 text-red-600 flex-shrink-0 mt-0.5" />
+              <div>
+                <div className="font-bold text-base">Error</div>
+                <div className="text-sm">{t("errorEnvio")}</div>
+              </div>
+            </div>
+          )}
+
+          <form onSubmit={handleSubmit} className="space-y-6 flex-1">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="space-y-2">
+                <Label htmlFor="name" className="text-sm font-semibold text-gray-800">{t("nombreCompleto")}</Label>
+                <Input
+                  id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                  placeholder="Juan Pérez"
+                  className="h-11 border-gray-300 rounded-lg focus:border-blue-500 focus:ring-blue-500 text-gray-900"
+                />
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="company" className="text-sm font-semibold text-gray-800">{t("empresa")}</Label>
+                <Input
+                  id="company"
+                  name="company"
+                  value={formData.company}
+                  onChange={handleChange}
+                  placeholder="Mi Empresa S.A."
+                  className="h-11 border-gray-300 rounded-lg focus:border-blue-500 focus:ring-blue-500 text-gray-900"
+                />
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="space-y-2">
+                <Label htmlFor="email" className="text-sm font-semibold text-gray-800">{t("correoElectronico")}</Label>
+                <Input
+                  id="email"
+                  name="email"
+                  type="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                  placeholder="juan@ejemplo.com"
+                  className="h-11 border-gray-300 rounded-lg focus:border-blue-500 focus:ring-blue-500 text-gray-900"
+                />
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="phone" className="text-sm font-semibold text-gray-800">{t("telefono")}</Label>
+                <Input
+                  id="phone"
+                  name="phone"
+                  type="tel"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  placeholder="+52 123 456 7890"
+                  className="h-11 border-gray-300 rounded-lg focus:border-blue-500 focus:ring-blue-500 text-gray-900"
+                />
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="space-y-2">
+                <Label htmlFor="service" className="text-sm font-semibold text-gray-800">{t("tipoServicio")}</Label>
+                <select
+                  id="service"
+                  name="service"
+                  value={formData.service}
+                  onChange={handleChange}
+                  className="flex h-11 w-full rounded-lg border border-gray-300 bg-white px-4 py-2 text-sm text-gray-900 ring-offset-white placeholder:text-gray-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-0 disabled:cursor-not-allowed disabled:opacity-50"
+                >
+                  <option value="">{t("seleccioneServicio")}</option>
+                  <option value="terrestrial">{t("logisticaTerrestre")}</option>
+                  <option value="air">{t("logisticaAerea")}</option>
+                  <option value="maritime">{t("logisticaMaritima")}</option>
+                  <option value="storage">{t("almacenamiento")}</option>
+                  <option value="other">Otro</option>
+                </select>
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="origin" className="text-sm font-semibold text-gray-800">{t("origen")}</Label>
+                <Input
+                  id="origin"
+                  name="origin"
+                  value={formData.origin}
+                  onChange={handleChange}
+                  placeholder="Ciudad de Origen"
+                  className="h-11 border-gray-300 rounded-lg focus:border-blue-500 focus:ring-blue-500 text-gray-900"
+                />
+              </div>
+            </div>
+
+            <div className="space-y-2">
+              <Label htmlFor="destination" className="text-sm font-semibold text-gray-800">{t("destino")}</Label>
+              <Input
+                id="destination"
+                name="destination"
+                value={formData.destination}
+                onChange={handleChange}
+                placeholder="Ciudad de Destino"
+                className="h-11 border-gray-300 rounded-lg focus:border-blue-500 focus:ring-blue-500 text-gray-900"
+              />
+            </div>
+
+            <div className="space-y-2">
+              <Label htmlFor="message" className="text-sm font-semibold text-gray-800">{t("mensaje")}</Label>
+              <Textarea
+                id="message"
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                required
+                placeholder={t("detallesAdicionales")}
+                className="min-h-[120px] border-gray-300 rounded-lg focus:border-blue-500 focus:ring-blue-500 text-gray-900"
+              />
+            </div>
+
+            <Button type="submit" className="w-full h-12 bg-gray-900 hover:bg-gray-800 text-white font-bold text-base rounded-lg transition-colors" disabled={isSubmitting}>
+              {isSubmitting ? (
+                <>
+                  <Loader2 className="mr-2 h-5 w-5 animate-spin" /> {t("enviando")}
+                </>
+              ) : (
+                t("enviar")
+              )}
+            </Button>
+          </form>
         </div>
       </div>
     </div>
