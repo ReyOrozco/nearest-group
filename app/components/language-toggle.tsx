@@ -301,6 +301,42 @@ const translations: Translations = {
   },
   anteriorResena: { es: "Reseña anterior", en: "Previous review" },
   siguienteResena: { es: "Siguiente reseña", en: "Next review" },
+
+  // Nuevas claves de traducción para secciones faltantes
+  serviciosTitle: { es: "Nuestros Servicios", en: "Our Services" },
+  serviciosDesc: {
+    es: "Ofrecemos soluciones logísticas integrales adaptadas a las necesidades específicas de cada cliente",
+    en: "We offer comprehensive logistics solutions tailored to the specific needs of each client",
+  },
+  historiasExitoTitle: { es: "Historias de Éxito", en: "Success Stories" },
+  historiasExitoDesc: {
+    es: "Empresas que han optimizado sus operaciones logísticas con nuestras soluciones",
+    en: "Companies that have optimized their logistics operations with our solutions",
+  },
+  nombreCompleto: { es: "Nombre Completo", en: "Full Name" },
+  correoElectronico: { es: "Correo Electrónico", en: "Email Address" },
+  asunto: { es: "Asunto", en: "Subject" },
+  enviar: { es: "Enviar", en: "Send" },
+  enviando: { es: "Enviando...", en: "Sending..." },
+  mensajeEnviado: { es: "¡Tu mensaje ha sido enviado exitosamente!", en: "Your message has been sent successfully!" },
+  errorEnvio: { es: "Hubo un error al enviar tu mensaje. Por favor intenta nuevamente.", en: "There was an error sending your message. Please try again." },
+
+  // Testimonios y casos de éxito
+  testimonio: { es: "Testimonio", en: "Testimonial" },
+  casoExito: { es: "Caso de Éxito", en: "Success Case" },
+  desafio: { es: "Desafío", en: "Challenge" },
+  solucion: { es: "Solución", en: "Solution" },
+  resultado: { es: "Resultado", en: "Result" },
+  redujeronCostos: { es: "Redujeron costos de envío", en: "Reduced shipping costs" },
+  mejorEntrega: { es: "Mejoró tiempo de entrega", en: "Improved delivery time" },
+  aumentoCapacidad: { es: "Aumentó capacidad de almacenamiento", en: "Increased storage capacity" },
+
+  // Industrias
+  textil: { es: "Ropa y Textil", en: "Clothing and Textile" },
+  farmaceutico: { es: "Farmacéutico", en: "Pharmaceutical" },
+  alimentos: { es: "Alimentos y Bebidas", en: "Food and Beverages" },
+  automotriz: { es: "Automotriz", en: "Automotive" },
+  electronica: { es: "Electrónica", en: "Electronics" },
 }
 
 // Crear el contexto para el idioma
