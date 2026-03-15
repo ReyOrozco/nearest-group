@@ -35,10 +35,10 @@ export default function Home() {
     <div className="flex min-h-screen flex-col">
       <SiteHeader />
 
-     {/* HERO */}
-        <section
-          id="hero"
-          className="
+      {/* HERO */}
+      <section
+        id="hero"
+        className="
             relative
             w-full
             bg-cover
@@ -47,36 +47,36 @@ export default function Home() {
             py-16
             md:py-24
           "
-          style={{
-            backgroundImage:
-              "url(https://crepkozegpevqpyh.public.blob.vercel-storage.com/Portada_2026.jpg)",
-          }}
-        >
-          {/* Overlay suave para contraste */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/35 to-transparent" />
+        style={{
+          backgroundImage:
+            "url(https://crepkozegpevqpyh.public.blob.vercel-storage.com/Portada_01.png)",
+        }}
+      >
+        {/* Overlay suave para contraste */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/35 to-transparent" />
 
-          <div className="container relative z-10 grid max-w-6xl gap-12 md:grid-cols-2">
-            <div>
-              <h1 className="mb-6 text-4xl font-extrabold md:text-5xl text-[#00B5F5] leading-tight drop-shadow-lg">
-                {t("heroTitle")}
-              </h1>
+        <div className="container relative z-10 grid max-w-6xl gap-12 md:grid-cols-2">
+          <div>
+            <h1 className="mb-6 text-4xl font-extrabold md:text-5xl text-[#00B5F5] leading-tight drop-shadow-lg">
+              {t("heroTitle")}
+            </h1>
 
-              <p className="mb-10 max-w-md text-lg md:text-xl text-white/95 leading-relaxed drop-shadow-md">
-                {t("heroSubtitle")}
-              </p>
+            <p className="mb-10 max-w-md text-lg md:text-xl text-white/95 leading-relaxed drop-shadow-md">
+              {t("heroSubtitle")}
+            </p>
 
-              <Button
-                asChild
-                size="lg"
-                className="bg-[#00B5F5] hover:bg-[#00A3DD] text-white shadow-lg transition-colors"
-              >
-                <Link href="/#contact">
-                  {t("solicitarCotizacion")} →
-                </Link>
-              </Button>
-            </div>
+            <Button
+              asChild
+              size="lg"
+              className="bg-[#00B5F5] hover:bg-[#00A3DD] text-white shadow-lg transition-colors"
+            >
+              <Link href="/#contact">
+                {t("solicitarCotizacion")} →
+              </Link>
+            </Button>
           </div>
-        </section>
+        </div>
+      </section>
 
 
       {/* ABOUT */}
@@ -109,36 +109,36 @@ export default function Home() {
                 <Globe className="h-6 w-6" />
                 <h3 className="text-xl font-bold">{t("vision")}</h3>
               </div>
-               <p className="text-muted-foreground text-justify leading-relaxed">
-                  {t("misionDesc")}
-                </p>
+              <p className="text-muted-foreground text-justify leading-relaxed">
+                {t("misionDesc")}
+              </p>
             </div>
 
             {/* VALORES */}
-              <div className="flex flex-col items-center space-y-6">
-                {/* Encabezado con icono */}
-                <div className="flex items-center gap-2 text-primary">
-                  <CheckCircle className="h-6 w-6" />
-                  <h3 className="text-xl font-bold text-center">
-                    {t("valores")}
-                  </h3>
-                </div>
-
-                {/* Contenido en 2 columnas centradas */}
-                <div className="grid grid-cols-2 gap-x-12 gap-y-3 text-sm text-muted-foreground text-center">
-                  {/* Columna 1 */}
-                  <span>{t("compromiso")}</span>
-                  <span>{t("trabajoEquipo")}</span>
-
-                  <span>{t("puntualidad")}</span>
-                  <span>{t("transparencia")}</span>
-
-                  <span>{t("innovacion")}</span>
-                  <span>{t("excelenciaOperativa")}</span>
-
-                  <span>{t("responsabilidad")}</span>
-                </div>
+            <div className="flex flex-col items-center space-y-6">
+              {/* Encabezado con icono */}
+              <div className="flex items-center gap-2 text-primary">
+                <CheckCircle className="h-6 w-6" />
+                <h3 className="text-xl font-bold text-center">
+                  {t("valores")}
+                </h3>
               </div>
+
+              {/* Contenido en 2 columnas centradas */}
+              <div className="grid grid-cols-2 gap-x-12 gap-y-3 text-sm text-muted-foreground text-center">
+                {/* Columna 1 */}
+                <span>{t("compromiso")}</span>
+                <span>{t("trabajoEquipo")}</span>
+
+                <span>{t("puntualidad")}</span>
+                <span>{t("transparencia")}</span>
+
+                <span>{t("innovacion")}</span>
+                <span>{t("excelenciaOperativa")}</span>
+
+                <span>{t("responsabilidad")}</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
