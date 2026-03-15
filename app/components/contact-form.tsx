@@ -68,10 +68,10 @@ export function ContactForm() {
 
   return (
     <div className="w-full">
-      <div className="grid grid-cols-1 lg:grid-cols-5 gap-0 bg-white">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 bg-white">
         {/* LEFT COLUMN - CONTACT INFO */}
-        <div className="lg:col-span-2 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 text-white p-8 md:p-12 lg:p-14">
-          <h2 className="text-3xl md:text-4xl font-bold mb-12">{t("enviarSolicitud")}</h2>
+        <div className="bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 text-white p-8 md:p-12 lg:p-14">
+          <h2 className="text-3xl md:text-4xl font-bold mb-12">Información de Contacto</h2>
           
           <div className="space-y-10">
             {/* Phone */}
@@ -149,7 +149,7 @@ export function ContactForm() {
         </div>
 
         {/* RIGHT COLUMN - FORM */}
-        <div className="lg:col-span-3 p-8 md:p-12 lg:p-14 flex flex-col">
+        <div className="p-8 md:p-12 lg:p-14 flex flex-col">
           <div className="mb-8">
             <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Envíanos un mensaje</h3>
             <p className="text-gray-600 text-lg">Te responderemos en menos de 24 horas</p>
