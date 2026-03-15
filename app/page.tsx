@@ -49,14 +49,18 @@ export default function Home() {
           "
         style={{
           backgroundImage:
-            "url(https://crepkozegpevqpyh.public.blob.vercel-storage.com/Portada_01.png)",
+            "url(https://crepkozegpevqpyh.public.blob.vercel-storage.com/PRB_012.png)",
         }}
       >
-        {/* Overlay suave para contraste */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/35 to-transparent" />
+        {/* Overlay suave para contraste - gradiente desde la derecha */}
+        <div className="absolute inset-0 bg-gradient-to-l from-black/70 via-black/35 to-transparent" />
 
         <div className="container relative z-10 grid max-w-6xl gap-12 md:grid-cols-2">
-          <div>
+          {/* Columna izquierda vacía - imagen de fondo visible */}
+          <div />
+
+          {/* Columna derecha - contenido */}
+          <div className="flex flex-col items-start justify-center">
             <h1 className="mb-6 text-4xl font-extrabold md:text-5xl text-[#00B5F5] leading-tight drop-shadow-lg">
               {t("heroTitle")}
             </h1>
