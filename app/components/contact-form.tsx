@@ -68,18 +68,78 @@ export function ContactForm() {
 
   return (
     <div className="w-full">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 bg-white">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 bg-white rounded-lg shadow-xl overflow-hidden">
         {/* LEFT COLUMN - CONTACT INFO */}
-        <div className="bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 text-white p-8 md:p-12 lg:p-14">
+        <div className="bg-[#38b6ff] text-white p-8 md:p-12 lg:p-14 flex flex-col justify-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-12">Información de Contacto</h2>
           
           <div className="space-y-10">
             {/* Phone */}
             <div className="flex gap-5">
               <div className="flex-shrink-0">
-                <div className="flex items-center justify-center h-14 w-14 rounded-xl bg-blue-500/20 border border-blue-500/30">
-                  <Phone className="h-7 w-7 text-blue-400" />
+                <div className="flex items-center justify-center h-14 w-14 rounded-xl bg-white/20 border border-white/30">
+                  <Phone className="h-7 w-7 text-white" />
                 </div>
+              </div>
+              <div>
+                <h4 className="font-semibold text-sm text-white/90">Teléfono</h4>
+                <p className="mt-1 text-white font-medium">+52 55 1234 5678</p>
+              </div>
+            </div>
+
+            {/* Email */}
+            <div className="flex gap-5">
+              <div className="flex-shrink-0">
+                <div className="flex items-center justify-center h-14 w-14 rounded-xl bg-white/20 border border-white/30">
+                  <Mail className="h-7 w-7 text-white" />
+                </div>
+              </div>
+              <div>
+                <h4 className="font-semibold text-sm text-white/90">Email</h4>
+                <p className="mt-1 text-white font-medium">contacto@nearestgroup.com</p>
+              </div>
+            </div>
+
+            {/* Office */}
+            <div className="flex gap-5">
+              <div className="flex-shrink-0">
+                <div className="flex items-center justify-center h-14 w-14 rounded-xl bg-white/20 border border-white/30">
+                  <MapPin className="h-7 w-7 text-white" />
+                </div>
+              </div>
+              <div>
+                <h4 className="font-semibold text-sm text-white/90">Oficina Principal</h4>
+                <p className="mt-2 text-white text-sm leading-relaxed">
+                  Calle 8 #30 Int. 1<br/>
+                  Ampliación Progreso Nacional<br/>
+                  C.P. 07650, Ciudad de México
+                </p>
+              </div>
+            </div>
+
+            {/* Hours */}
+            <div className="flex gap-5">
+              <div className="flex-shrink-0">
+                <div className="flex items-center justify-center h-14 w-14 rounded-xl bg-white/20 border border-white/30">
+                  <Clock className="h-7 w-7 text-white" />
+                </div>
+              </div>
+              <div>
+                <h4 className="font-semibold text-sm text-white/90">Horario de Atención</h4>
+                <p className="mt-2 text-white text-sm">
+                  Lunes - Viernes: 8:00 AM - 6:00 PM<br/>
+                  Sábado: 9:00 AM - 1:00 PM
+                </p>
+              </div>
+            </div>
+
+            {/* Additional Info */}
+            <div className="mt-12 pt-8 border-t border-white/20">
+              <p className="text-sm text-white/80 mb-3 font-semibold">Información Adicional</p>
+              <p className="text-sm text-white mb-2">contacto@nearestgroup.com</p>
+              <p className="text-sm text-white mb-2">www.nearestgroup.com</p>
+              <p className="text-sm text-white font-semibold">Centro de monitoreo: 24/7</p>
+            </div>
               </div>
               <div>
                 <h4 className="font-semibold text-sm text-gray-300 mb-1">Teléfono</h4>
