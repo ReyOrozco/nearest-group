@@ -154,10 +154,8 @@ export default function Home() {
       <NewsSection />
 
       {/* CONTACT SECTION */}
-      <section id="contact" className="w-full py-12 md:py-24 lg:py-32 bg-muted/30">
-        <div className="container max-w-lg mx-auto px-4 md:px-6">
-          <ContactForm />
-        </div>
+      <section id="contact" className="w-full py-12 md:py-24 lg:py-32 bg-white">
+        <ContactForm />
       </section>
 
       <FloatingVideoButton />
