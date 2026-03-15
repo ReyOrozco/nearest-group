@@ -28,6 +28,7 @@ export function ContactForm() {
     const { name, value } = e.target
     setFormData((prev) => ({ ...prev, [name]: value }))
   }
+  }
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
