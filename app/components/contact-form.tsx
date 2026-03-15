@@ -86,7 +86,7 @@ export function ContactForm() {
           <div className="relative bg-gradient-to-br from-[#38b6ff] to-[#1e90ff] text-white p-12 flex flex-col justify-center">
 
             <h2 className="text-4xl font-bold mb-10">
-              Hablemos de tu proyecto
+              Hablemos de tu Negocio
             </h2>
 
             <div className="space-y-8">
@@ -95,7 +95,7 @@ export function ContactForm() {
                 <Phone className="h-6 w-6 mt-1" />
                 <div>
                   <p className="font-semibold">Teléfono</p>
-                  <p className="text-white/90">+52 55 1234 5678</p>
+                  <p className="text-white/90">+52 81 1075 9409</p>
                 </div>
               </div>
 
@@ -103,7 +103,7 @@ export function ContactForm() {
                 <Mail className="h-6 w-6 mt-1" />
                 <div>
                   <p className="font-semibold">Email</p>
-                  <p className="text-white/90">contacto@nearestgroup.com</p>
+                  <p className="text-white/90">luis.parra@nearestgroup.com</p>
                 </div>
               </div>
 
@@ -112,8 +112,8 @@ export function ContactForm() {
                 <div>
                   <p className="font-semibold">Oficina</p>
                   <p className="text-white/90 text-sm leading-relaxed">
-                    Ciudad de México<br />
-                    Ampliación Progreso Nacional
+                    Monterrey Nuevo León<br />
+                    Miguel Hidalgo y Costilla 2404, Obispado, 64060 Monterrey, N.L.
                   </p>
                 </div>
               </div>
