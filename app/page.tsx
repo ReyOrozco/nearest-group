@@ -49,7 +49,7 @@ export default function Home() {
           "
         style={{
           backgroundImage:
-            "url(https://crepkozegpevqpyh.public.blob.vercel-storage.com/Portada_01.png)",
+            "url(https://crepkozegpevqpyh.public.blob.vercel-storage.com/PRB_012.png)",
         }}
       >
         {/* Overlay suave para contraste */}
