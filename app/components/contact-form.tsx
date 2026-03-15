@@ -68,12 +68,12 @@ export function ContactForm() {
   }
 
   return (
-    <Card className="w-full max-w-lg">
-      <CardHeader>
-        <CardTitle>{t("enviarSolicitud")}</CardTitle>
+    <Card className="w-full">
+      <CardHeader className="bg-gradient-to-r from-blue-50 to-blue-100 border-b">
+        <CardTitle className="text-2xl">{t("enviarSolicitud")}</CardTitle>
         <CardDescription>{t("stayUpToDate")}</CardDescription>
       </CardHeader>
-      <CardContent>
+      <CardContent className="pt-6">
         {submitStatus === "success" && (
           <div className="mb-4 p-3 bg-green-50 text-green-800 border border-green-200 rounded flex items-start gap-2">
             <CheckCircle2 className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
@@ -94,92 +94,106 @@ export function ContactForm() {
           </div>
         )}
 
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <div className="space-y-2">
-            <Label htmlFor="name">{t("nombreCompleto")}</Label>
-            <Input
-              id="name"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              required
-              placeholder="Juan Pérez"
-            />
-          </div>
-          <div className="space-y-2">
-            <Label htmlFor="company">{t("empresa")}</Label>
-            <Input
-              id="company"
-              name="company"
-              value={formData.company}
-              onChange={handleChange}
-              placeholder="Mi Empresa S.A."
-            />
-          </div>
-          <div className="space-y-2">
-            <Label htmlFor="email">{t("correoElectronico")}</Label>
-            <Input
-              id="email"
-              name="email"
-              type="email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-              placeholder="juan@ejemplo.com"
-            />
-          </div>
-          <div className="space-y-2">
-            <Label htmlFor="phone">{t("telefono")}</Label>
-            <Input
-              id="phone"
-              name="phone"
-              type="tel"
-              value={formData.phone}
-              onChange={handleChange}
-              placeholder="+52 123 456 7890"
-            />
-          </div>
-          <div className="space-y-2">
-            <Label htmlFor="service">{t("tipoServicio")}</Label>
-            <select
-              id="service"
-              name="service"
-              value={formData.service}
-              onChange={handleChange}
-              className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-            >
-              <option value="">{t("seleccioneServicio")}</option>
-              <option value="terrestrial">{t("logisticaTerrestre")}</option>
-              <option value="air">{t("logisticaAerea")}</option>
-              <option value="maritime">{t("logisticaMaritima")}</option>
-              <option value="storage">{t("almacenamiento")}</option>
-              <option value="other">Otro</option>
-            </select>
-          </div>
-          <div className="grid grid-cols-2 gap-4">
+        <form onSubmit={handleSubmit} className="space-y-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="space-y-2">
-              <Label htmlFor="origin">{t("origen")}</Label>
+              <Label htmlFor="name" className="text-sm font-medium">{t("nombreCompleto")}</Label>
+              <Input
+                id="name"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+                placeholder="Juan Pérez"
+                className="h-10 border-gray-300 focus:border-blue-500 focus:ring-blue-500"
+              />
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="company" className="text-sm font-medium">{t("empresa")}</Label>
+              <Input
+                id="company"
+                name="company"
+                value={formData.company}
+                onChange={handleChange}
+                placeholder="Mi Empresa S.A."
+                className="h-10 border-gray-300 focus:border-blue-500 focus:ring-blue-500"
+              />
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="space-y-2">
+              <Label htmlFor="email" className="text-sm font-medium">{t("correoElectronico")}</Label>
+              <Input
+                id="email"
+                name="email"
+                type="email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+                placeholder="juan@ejemplo.com"
+                className="h-10 border-gray-300 focus:border-blue-500 focus:ring-blue-500"
+              />
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="phone" className="text-sm font-medium">{t("telefono")}</Label>
+              <Input
+                id="phone"
+                name="phone"
+                type="tel"
+                value={formData.phone}
+                onChange={handleChange}
+                placeholder="+52 123 456 7890"
+                className="h-10 border-gray-300 focus:border-blue-500 focus:ring-blue-500"
+              />
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="space-y-2">
+              <Label htmlFor="service" className="text-sm font-medium">{t("tipoServicio")}</Label>
+              <select
+                id="service"
+                name="service"
+                value={formData.service}
+                onChange={handleChange}
+                className="flex h-10 w-full rounded-md border border-gray-300 bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-0 disabled:cursor-not-allowed disabled:opacity-50"
+              >
+                <option value="">{t("seleccioneServicio")}</option>
+                <option value="terrestrial">{t("logisticaTerrestre")}</option>
+                <option value="air">{t("logisticaAerea")}</option>
+                <option value="maritime">{t("logisticaMaritima")}</option>
+                <option value="storage">{t("almacenamiento")}</option>
+                <option value="other">Otro</option>
+              </select>
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="origin" className="text-sm font-medium">{t("origen")}</Label>
               <Input
                 id="origin"
                 name="origin"
                 value={formData.origin}
                 onChange={handleChange}
                 placeholder="Ciudad de Origen"
-              />
-            </div>
-            <div className="space-y-2">
-              <Label htmlFor="destination">{t("destino")}</Label>
-              <Input
-                id="destination"
-                name="destination"
-                value={formData.destination}
-                onChange={handleChange}
-                placeholder="Ciudad de Destino"
+                className="h-10 border-gray-300 focus:border-blue-500 focus:ring-blue-500"
               />
             </div>
           </div>
+
           <div className="space-y-2">
-            <Label htmlFor="message">{t("mensaje")}</Label>
+            <Label htmlFor="destination" className="text-sm font-medium">{t("destino")}</Label>
+            <Input
+              id="destination"
+              name="destination"
+              value={formData.destination}
+              onChange={handleChange}
+              placeholder="Ciudad de Destino"
+              className="h-10 border-gray-300 focus:border-blue-500 focus:ring-blue-500"
+            />
+          </div>
+
+          <div className="space-y-2">
+            <Label htmlFor="message" className="text-sm font-medium">{t("mensaje")}</Label>
             <Textarea
               id="message"
               name="message"
@@ -187,10 +201,10 @@ export function ContactForm() {
               onChange={handleChange}
               required
               placeholder={t("detallesAdicionales")}
-              className="min-h-[120px]"
+              className="min-h-[100px] border-gray-300 focus:border-blue-500 focus:ring-blue-500"
             />
           </div>
-          <Button type="submit" className="w-full" disabled={isSubmitting}>
+          <Button type="submit" className="w-full h-11 bg-blue-600 hover:bg-blue-700 font-semibold" disabled={isSubmitting}>
             {isSubmitting ? (
               <>
                 <Loader2 className="mr-2 h-4 w-4 animate-spin" /> {t("enviando")}

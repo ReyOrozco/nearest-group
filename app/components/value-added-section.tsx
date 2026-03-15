@@ -1,12 +1,9 @@
 "use client"
 
-import { Users, LogisticsIcon, Globe, Zap } from "lucide-react"
+import { Users, Truck, Globe, Zap } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { useLanguage } from "./language-toggle"
 import { motion } from "framer-motion"
-
-// Fallback icon for LogisticsIcon
-const LogisticsIconFallback = () => <div className="h-5 w-5" />
 
 export function ValueAddedSection() {
   const { t } = useLanguage()
@@ -18,7 +15,7 @@ export function ValueAddedSection() {
       descriptionKey: "atencionPersonalizadaDesc",
     },
     {
-      icon: LogisticsIconFallback,
+      icon: Truck,
       titleKey: "puertaAPuerta",
       descriptionKey: "puertaAPuertaDesc",
     },
