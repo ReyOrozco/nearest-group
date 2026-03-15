@@ -9,7 +9,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { AlertCircle, CheckCircle2, Loader2 } from "lucide-react"
+import { AlertCircle, CheckCircle2, Loader2, Phone, Mail, MapPin, Clock } from "lucide-react"
 
 export function ContactForm() {
   const { t } = useLanguage()
@@ -68,14 +68,88 @@ export function ContactForm() {
   }
 
   return (
-    <Card className="w-full">
-      <CardHeader className="bg-gradient-to-r from-blue-50 to-blue-100 border-b">
-        <CardTitle className="text-2xl">{t("enviarSolicitud")}</CardTitle>
-        <CardDescription>{t("stayUpToDate")}</CardDescription>
-      </CardHeader>
-      <CardContent className="pt-6">
+    <div className="w-full bg-white rounded-lg shadow-lg overflow-hidden">
+      <div className="grid grid-cols-1 md:grid-cols-5 gap-0">
+        {/* LEFT COLUMN - CONTACT INFO */}
+        <div className="md:col-span-2 bg-gradient-to-b from-gray-900 to-gray-800 text-white p-8 md:p-10">
+          <h3 className="text-2xl font-bold mb-8">{t("enviarSolicitud")}</h3>
+          
+          <div className="space-y-8">
+            {/* Phone */}
+            <div className="flex gap-4">
+              <div className="flex-shrink-0">
+                <div className="flex items-center justify-center h-12 w-12 rounded-lg bg-blue-500/20">
+                  <Phone className="h-6 w-6 text-blue-400" />
+                </div>
+              </div>
+              <div>
+                <h4 className="font-semibold text-sm text-gray-300">Teléfono</h4>
+                <p className="mt-1 text-white font-medium">+52 55 1234 5678</p>
+              </div>
+            </div>
+
+            {/* Email */}
+            <div className="flex gap-4">
+              <div className="flex-shrink-0">
+                <div className="flex items-center justify-center h-12 w-12 rounded-lg bg-blue-500/20">
+                  <Mail className="h-6 w-6 text-blue-400" />
+                </div>
+              </div>
+              <div>
+                <h4 className="font-semibold text-sm text-gray-300">Email</h4>
+                <p className="mt-1 text-white font-medium">contacto@nearestgroup.com</p>
+              </div>
+            </div>
+
+            {/* Office */}
+            <div className="flex gap-4">
+              <div className="flex-shrink-0">
+                <div className="flex items-center justify-center h-12 w-12 rounded-lg bg-blue-500/20">
+                  <MapPin className="h-6 w-6 text-blue-400" />
+                </div>
+              </div>
+              <div>
+                <h4 className="font-semibold text-sm text-gray-300">Oficina Principal</h4>
+                <p className="mt-1 text-white text-sm leading-relaxed">
+                  Calle 8 #30 Int. 1<br/>
+                  Ampliación Progreso Nacional<br/>
+                  C.P. 07650, Ciudad de México
+                </p>
+              </div>
+            </div>
+
+            {/* Hours */}
+            <div className="flex gap-4">
+              <div className="flex-shrink-0">
+                <div className="flex items-center justify-center h-12 w-12 rounded-lg bg-blue-500/20">
+                  <Clock className="h-6 w-6 text-blue-400" />
+                </div>
+              </div>
+              <div>
+                <h4 className="font-semibold text-sm text-gray-300">Horario de Atención</h4>
+                <p className="mt-1 text-white text-sm">
+                  Lunes - Viernes: 8:00 AM - 6:00 PM<br/>
+                  Sábado: 9:00 AM - 1:00 PM
+                </p>
+              </div>
+            </div>
+
+            {/* Additional Info */}
+            <div className="mt-8 pt-8 border-t border-gray-700">
+              <p className="text-sm text-gray-400 mb-3 font-semibold">Información Adicional</p>
+              <p className="text-sm text-blue-300 mb-2">contacto@nearestgroup.com</p>
+              <p className="text-sm text-blue-300 mb-2">www.nearestgroup.com</p>
+              <p className="text-sm text-green-400 font-semibold">Centro de monitoreo: 24/7</p>
+            </div>
+          </div>
+        </div>
+
+        {/* RIGHT COLUMN - FORM */}
+        <div className="md:col-span-3 p-8 md:p-10">
+          <h3 className="text-2xl font-bold text-gray-800 mb-2">Envíanos un mensaje</h3>
+          <p className="text-gray-600 mb-6">Te responderemos en menos de 24 horas</p>
         {submitStatus === "success" && (
-          <div className="mb-4 p-3 bg-green-50 text-green-800 border border-green-200 rounded flex items-start gap-2">
+          <div className="mb-6 p-4 bg-green-50 text-green-800 border border-green-200 rounded-lg flex items-start gap-3">
             <CheckCircle2 className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
             <div>
               <div className="font-semibold">¡Éxito!</div>
@@ -85,7 +159,7 @@ export function ContactForm() {
         )}
 
         {submitStatus === "error" && (
-          <div className="mb-4 p-3 bg-red-50 text-red-800 border border-red-200 rounded flex items-start gap-2">
+          <div className="mb-6 p-4 bg-red-50 text-red-800 border border-red-200 rounded-lg flex items-start gap-3">
             <AlertCircle className="h-5 w-5 text-red-600 flex-shrink-0 mt-0.5" />
             <div>
               <div className="font-semibold">Error</div>
@@ -97,7 +171,7 @@ export function ContactForm() {
         <form onSubmit={handleSubmit} className="space-y-5">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="space-y-2">
-              <Label htmlFor="name" className="text-sm font-medium">{t("nombreCompleto")}</Label>
+              <Label htmlFor="name" className="text-sm font-medium text-gray-700">{t("nombreCompleto")}</Label>
               <Input
                 id="name"
                 name="name"
@@ -109,7 +183,7 @@ export function ContactForm() {
               />
             </div>
             <div className="space-y-2">
-              <Label htmlFor="company" className="text-sm font-medium">{t("empresa")}</Label>
+              <Label htmlFor="company" className="text-sm font-medium text-gray-700">{t("empresa")}</Label>
               <Input
                 id="company"
                 name="company"
@@ -123,7 +197,7 @@ export function ContactForm() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="space-y-2">
-              <Label htmlFor="email" className="text-sm font-medium">{t("correoElectronico")}</Label>
+              <Label htmlFor="email" className="text-sm font-medium text-gray-700">{t("correoElectronico")}</Label>
               <Input
                 id="email"
                 name="email"
@@ -136,7 +210,7 @@ export function ContactForm() {
               />
             </div>
             <div className="space-y-2">
-              <Label htmlFor="phone" className="text-sm font-medium">{t("telefono")}</Label>
+              <Label htmlFor="phone" className="text-sm font-medium text-gray-700">{t("telefono")}</Label>
               <Input
                 id="phone"
                 name="phone"
@@ -151,13 +225,13 @@ export function ContactForm() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="space-y-2">
-              <Label htmlFor="service" className="text-sm font-medium">{t("tipoServicio")}</Label>
+              <Label htmlFor="service" className="text-sm font-medium text-gray-700">{t("tipoServicio")}</Label>
               <select
                 id="service"
                 name="service"
                 value={formData.service}
                 onChange={handleChange}
-                className="flex h-10 w-full rounded-md border border-gray-300 bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-0 disabled:cursor-not-allowed disabled:opacity-50"
+                className="flex h-10 w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm text-gray-700 ring-offset-white placeholder:text-gray-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-0 disabled:cursor-not-allowed disabled:opacity-50"
               >
                 <option value="">{t("seleccioneServicio")}</option>
                 <option value="terrestrial">{t("logisticaTerrestre")}</option>
@@ -168,7 +242,7 @@ export function ContactForm() {
               </select>
             </div>
             <div className="space-y-2">
-              <Label htmlFor="origin" className="text-sm font-medium">{t("origen")}</Label>
+              <Label htmlFor="origin" className="text-sm font-medium text-gray-700">{t("origen")}</Label>
               <Input
                 id="origin"
                 name="origin"
@@ -181,7 +255,7 @@ export function ContactForm() {
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="destination" className="text-sm font-medium">{t("destino")}</Label>
+            <Label htmlFor="destination" className="text-sm font-medium text-gray-700">{t("destino")}</Label>
             <Input
               id="destination"
               name="destination"
@@ -193,7 +267,7 @@ export function ContactForm() {
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="message" className="text-sm font-medium">{t("mensaje")}</Label>
+            <Label htmlFor="message" className="text-sm font-medium text-gray-700">{t("mensaje")}</Label>
             <Textarea
               id="message"
               name="message"
@@ -204,7 +278,7 @@ export function ContactForm() {
               className="min-h-[100px] border-gray-300 focus:border-blue-500 focus:ring-blue-500"
             />
           </div>
-          <Button type="submit" className="w-full h-11 bg-blue-600 hover:bg-blue-700 font-semibold" disabled={isSubmitting}>
+          <Button type="submit" className="w-full h-11 bg-gray-900 hover:bg-gray-800 text-white font-semibold rounded-md" disabled={isSubmitting}>
             {isSubmitting ? (
               <>
                 <Loader2 className="mr-2 h-4 w-4 animate-spin" /> {t("enviando")}
@@ -214,7 +288,8 @@ export function ContactForm() {
             )}
           </Button>
         </form>
-      </CardContent>
-    </Card>
+        </div>
+      </div>
+    </div>
   )
 }
