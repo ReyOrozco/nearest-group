@@ -1,7 +1,6 @@
 "use client"
 
 import type React from "react"
-
 import { useState } from "react"
 import { useLanguage } from "./language-toggle"
 import { Button } from "@/components/ui/button"
@@ -139,68 +138,6 @@ export function ContactForm() {
               <p className="text-sm text-white mb-2">contacto@nearestgroup.com</p>
               <p className="text-sm text-white mb-2">www.nearestgroup.com</p>
               <p className="text-sm text-white font-semibold">Centro de monitoreo: 24/7</p>
-            </div>
-              </div>
-              <div>
-                <h4 className="font-semibold text-sm text-gray-300 mb-1">Teléfono</h4>
-                <p className="text-white font-medium text-lg">+52 55 1234 5678</p>
-              </div>
-            </div>
-
-            {/* Email */}
-            <div className="flex gap-5">
-              <div className="flex-shrink-0">
-                <div className="flex items-center justify-center h-14 w-14 rounded-xl bg-blue-500/20 border border-blue-500/30">
-                  <Mail className="h-7 w-7 text-blue-400" />
-                </div>
-              </div>
-              <div>
-                <h4 className="font-semibold text-sm text-gray-300 mb-1">Email</h4>
-                <p className="text-white font-medium text-lg">contacto@nearestgroup.com</p>
-              </div>
-            </div>
-
-            {/* Office */}
-            <div className="flex gap-5">
-              <div className="flex-shrink-0">
-                <div className="flex items-center justify-center h-14 w-14 rounded-xl bg-blue-500/20 border border-blue-500/30">
-                  <MapPin className="h-7 w-7 text-blue-400" />
-                </div>
-              </div>
-              <div>
-                <h4 className="font-semibold text-sm text-gray-300 mb-1">Oficina Principal</h4>
-                <p className="text-white text-base leading-relaxed">
-                  Calle 8 #30 Int. 1<br/>
-                  Ampliación Progreso Nacional<br/>
-                  C.P. 07650, Ciudad de México
-                </p>
-              </div>
-            </div>
-
-            {/* Hours */}
-            <div className="flex gap-5">
-              <div className="flex-shrink-0">
-                <div className="flex items-center justify-center h-14 w-14 rounded-xl bg-blue-500/20 border border-blue-500/30">
-                  <Clock className="h-7 w-7 text-blue-400" />
-                </div>
-              </div>
-              <div>
-                <h4 className="font-semibold text-sm text-gray-300 mb-1">Horario de Atención</h4>
-                <p className="text-white text-base">
-                  Lunes - Viernes: 8:00 AM - 6:00 PM<br/>
-                  Sábado: 9:00 AM - 1:00 PM
-                </p>
-              </div>
-            </div>
-
-            {/* Additional Info */}
-            <div className="mt-10 pt-10 border-t border-gray-700">
-              <p className="text-xs text-gray-400 mb-4 font-semibold uppercase tracking-wider">Información Adicional</p>
-              <div className="space-y-3">
-                <p className="text-sm text-blue-300 hover:text-blue-200 transition-colors">contacto@nearestgroup.com</p>
-                <p className="text-sm text-blue-300 hover:text-blue-200 transition-colors">www.nearestgroup.com</p>
-                <p className="text-sm text-white font-semibold">Centro de monitoreo: 24/7</p>
-              </div>
             </div>
           </div>
         </div>
