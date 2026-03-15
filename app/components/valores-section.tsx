@@ -58,4 +58,5 @@ export function ValoresSection() {
         </motion.div>
       </div>
     </section>
+  )
 }
