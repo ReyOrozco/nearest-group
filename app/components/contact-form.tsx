@@ -199,12 +199,7 @@ export function ContactForm() {
               <div className="space-y-3">
                 <p className="text-sm text-blue-300 hover:text-blue-200 transition-colors">contacto@nearestgroup.com</p>
                 <p className="text-sm text-blue-300 hover:text-blue-200 transition-colors">www.nearestgroup.com</p>
-                <p className="text-sm font-semibold">
-                  <span className="text-green-400">Centro de monitoreo:</span>
-                  <span className="text-white ml-2">24/7</span>
-                </p>
-              </div>
-            </div>
+                <p className="text-sm text-white font-semibold">Centro de monitoreo: 24/7</p>
               </div>
             </div>
           </div>
